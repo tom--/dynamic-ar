@@ -48,12 +48,13 @@ class DynamicActiveQuery extends ActiveQuery
             );
         }
 
-        if (empty($this->select) || $this->select === '*') {
-            $this->select = array_diff(array_keys($modelClass::getTableSchema()->columns), [$this->dynamicColumn]);
+        if (empty($this->select) || (is_array($this->select) && in_array('*', $this->select))) {
             $this->db = $modelClass::getDb();
             $this->select[$this->dynamicColumn] =
                 'COLUMN_JSON(' . $this->db->quoteColumnName($this->dynamicColumn) . ')';
         }
+
+        $this->preProcessDynamicAttributes();
 
         return parent::prepare($builder);
     }
@@ -109,7 +110,7 @@ class DynamicActiveQuery extends ActiveQuery
      *         ->all();
      *
      *     $cheapShirts = Product::find()
-     *         ->select('sale' => 'MAX({cost|decimal(6,2)}, 0.75 * {price.wholesale.12|decimal(6,2)})')
+     *         ->select(['sale' => 'MAX({cost|decimal(6,2)}, 0.75 * {price.wholesale.12|decimal(6,2)})'])
      *         ->where(['category' => Product::SHIRT])
      *         ->andWhere('{price.retail.unit|decimal(6,2)} < 20.00')
      *         ->all();
@@ -138,8 +139,9 @@ class DynamicActiveQuery extends ActiveQuery
             $params = $this->params;
         }
 
-        $dynamicColumn = $modelClass::dynamicColumn();
+        $this->postProcessDynamicAttributes();
 
+        $dynamicColumn = $modelClass::dynamicColumn();
         $callback = function ($matches) use (&$params, $dynamicColumn) {
             $type = !empty($matches[3]) ? $matches[3] : 'CHAR';
             $sql = $dynamicColumn;
@@ -148,6 +150,7 @@ class DynamicActiveQuery extends ActiveQuery
                 $params[$placeholder] = $column;
                 $sql = "COLUMN_GET($sql, $placeholder AS $type)";
             }
+
             return $sql;
         };
 
@@ -155,12 +158,74 @@ class DynamicActiveQuery extends ActiveQuery
             % (`?) \{
                 ( [a-z_\x7f-\xff][a-z0-9_\x7f-\xff]* (?: \. [^.|\s]+)* )
                 (?:  \| (binary (?:\(\d+\))? | char (?:\(\d+\))? | time (?:\(\d+\))? | datetime (?:\(\d+\))? | date
-                        | decimal (?:\(\d\d?(?:,\d\d?)?\))?  | double (?:\(\d\d?(?:,\d\d?)?\))?
-                        | int(eger)? | (?:un)? signed (?:\int(eger)?)?)  )?
+                        | decimal (?:\(\d\d?(?:,\d\d?)?\))?  | double (?:\(\d\d?,\d\d?\))?
+                        | int(eger)? | (?:un)? signed(?:\s\int(eger)?)?)  )?
             \} \1 %ix
 REGEXP;
         $sql = preg_replace_callback($pattern, $callback, $sql);
 
         return $db->createCommand($sql, $params);
+    }
+
+    /**
+     * Wrap all dynamic attributes like {attr.child} to brackets () to prevent escaping
+     * E.g. without this fix attribute {attr.child} will be escaped to `{attr`.`child}`
+     * @return array
+     */
+    private function preProcessDynamicAttributes()
+    {
+        $this->wrap('select');
+        $this->wrap('where');
+        $this->wrap('groupBy');
+        $this->wrap('having');
+        $this->wrap('orderBy');
+    }
+
+    private function wrap($attribute)
+    {
+        if (is_array($this->$attribute)) {
+            foreach ($this->$attribute as $key => $value) {
+                if (strpos($value, '{') !== false && strpos($value, '(') === false) {
+                    $this->{$attribute}[$key] = preg_replace('%({[^{}]+?})%', '($1)', $value);
+                    $value = $this->{$attribute}[$key];
+                }
+
+                if (strpos($key, '{') !== false && strpos($key, '(') === false) {
+                    unset($this->{$attribute}[$key]);
+                    $key = preg_replace('%({[^{}]+?})%', '($1)', $key);
+                    $this->{$attribute}[$key] = $value;
+                }
+            }
+        }
+    }
+
+    /**
+     * Unwrap dynamic attributes
+     */
+    private function postProcessDynamicAttributes()
+    {
+        $this->unwrap('select');
+        $this->unwrap('where');
+        $this->unwrap('groupBy');
+        $this->unwrap('having');
+        $this->unwrap('orderBy');
+    }
+
+    private function unwrap($attribute)
+    {
+        if (is_array($this->$attribute)) {
+            foreach ($this->$attribute as $key => $value) {
+                if (strpos('{', $value) !== false && strpos($value, '(') !== false) {
+                    $this->{$attribute}[$key] = preg_replace('%\(({[^{}]+?})\)%', '$1', $value);
+                    $value = $this->{$attribute}[$key];
+                }
+
+                if (strpos('{', $key) !== false && strpos($key, '(') !== false) {
+                    unset($this->{$attribute}[$key]);
+                    $key = preg_replace('%\(({[^{}]+?})\)%', '$1', $key);
+                    $this->{$attribute}[$key] = $value;
+                }
+            }
+        }
     }
 }
