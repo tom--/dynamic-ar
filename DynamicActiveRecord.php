@@ -234,16 +234,7 @@ class DynamicActiveRecord extends ActiveRecord
      */
     public function __get($name)
     {
-        $value = null;
-        try {
-            $value = parent::__get($name);
-        } catch (UnknownPropertyException $ignore) {
-            if (isset($this->dynamicAttributes) && array_key_exists($name, $this->dynamicAttributes)) {
-                $value = $this->dynamicAttributes[$name];
-            }
-        }
-
-        return $value;
+        return $this->getAttribute($name);
     }
 
     /**
@@ -257,10 +248,11 @@ class DynamicActiveRecord extends ActiveRecord
         try {
             parent::__set($name, $value);
         } catch (UnknownPropertyException $ignore) {
-            if (!preg_match('{^[a-z_\x7f-\xff][a-z0-9_\x7f-\xff]*$}i', $name)) {
+            if (!preg_match('{^[a-z_\x7f-\xff][a-z0-9_.\x7f-\xff]*$}i', $name)) {
                 throw new InvalidCallException('Invalid attribute name "' . $name . '"');
             }
-            $this->dynamicAttributes[$name] = $value;
+
+            $this->setAttribute($name, $value);
         }
     }
 
