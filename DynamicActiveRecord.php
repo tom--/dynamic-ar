@@ -45,12 +45,12 @@ use yii\db\ActiveRecord;
 class DynamicActiveRecord extends ActiveRecord
 {
     /**
-     * Prefix for base64 encoded dynamic sttribute values
+     * Prefix for base64 encoded dynamic attribute values
      */
     const DATA_URI_PREFIX = 'data:application/octet-stream;base64,';
 
     /**
-     * Prefix of PDO playholders for Dynamic Column names and values
+     * Prefix of PDO placeholders for Dynamic Column names and values
      */
     const PARAM_PREFIX = ':dqp';
 
@@ -107,7 +107,7 @@ class DynamicActiveRecord extends ActiveRecord
     /**
      * Returns a model attribute value.
      *
-     * @param string $name attribute name, use dotted notation for strucuted attributes.
+     * @param string $name attribute name, use dotted notation for structured attributes.
      *
      * @return mixed|null the attribute value or null if the attribute does not exist
      */
@@ -134,7 +134,7 @@ class DynamicActiveRecord extends ActiveRecord
     /**
      * Sets a model attribute.
      *
-     * @param string $name attribute name, use dotted notation for strucuted attributes.
+     * @param string $name attribute name, use dotted notation for structured attributes.
      * @param mixed $value the attribute value. A value of null effectively unsets the attribute.
      */
     public function setAttribute($name, $value)
@@ -180,7 +180,7 @@ class DynamicActiveRecord extends ActiveRecord
     /**
      * Returns if a model attribute is set.
      *
-     * @param string $name attribute name, use dotted notation for strucuted attributes.
+     * @param string $name attribute name, use dotted notation for structured attributes.
      *
      * @return bool true if the attribute is set
      */
@@ -209,7 +209,7 @@ class DynamicActiveRecord extends ActiveRecord
     /**
      * Unset a model attribute.
      *
-     * @param string $name attribute name, use dotted notation for strucuted attributes.
+     * @param string $name attribute name, use dotted notation for structured attributes.
      */
     public function unsetAttribute($name)
     {
@@ -241,15 +241,16 @@ class DynamicActiveRecord extends ActiveRecord
      *
      * @return array The list of keys in dotted notation
      */
-    protected static function dotKeys($prefix, $array)
+    protected static function dotKeyValues($prefix, $array)
     {
         $fields = [];
         foreach ($array as $key => $value) {
             if (is_string($key)) {
                 $newPos = $prefix . '.' . $key;
-                $fields[] = $newPos;
                 if (is_array($value)) {
-                    $fields = array_merge($fields, static::dotKeys($newPos, $value));
+                    $fields = array_merge($fields, static::dotKeyValues($newPos, $value));
+                } else {
+                    $fields[$newPos] = $value;
                 }
             }
         }
@@ -263,11 +264,24 @@ class DynamicActiveRecord extends ActiveRecord
      * @return array an array of all attribute names in dotted notation
      * @throws Exception
      */
-    public function allAttributes()
+    public function dotAttributeNames()
     {
         return array_merge(
             array_values(parent::fields()),
-            static::dotKeys(static::dynamicColumn(), $this->_dynamicAttributes)
+            array_keys(static::dotKeyValues(static::dynamicColumn(), $this->_dynamicAttributes))
+        );
+    }
+
+    /**
+     *
+     * @return array
+     * @throws Exception
+     */
+    public function dotAttributes()
+    {
+        return array_merge(
+            $this->attributes,
+            static::dotKeyValues(static::dynamicColumn(), $this->_dynamicAttributes)
         );
     }
 
@@ -382,8 +396,8 @@ class DynamicActiveRecord extends ActiveRecord
     {
         $sql = [];
         foreach ($attrs as $key => $value) {
-            if (is_object($value)) {
-                $value = (array) $value;
+            if (is_object($value) && !($value instanceof DynamicValue)) {
+                $value = method_exists($value, 'toArray') ? $value->toArray() : (array) $value;
             }
             if ($value === [] || $value === null) {
                 continue;
@@ -394,7 +408,9 @@ class DynamicActiveRecord extends ActiveRecord
             $sql[] = $phKey;
             $params[$phKey] = $key;
 
-            if (is_scalar($value)) {
+            if ($value instanceof DynamicValue || is_float($value)) {
+                $sql[] = $value;
+            } elseif (is_scalar($value)) {
                 $sql[] = $phValue;
                 $params[$phValue] = $value;
             } elseif (is_array($value)) {
@@ -412,8 +428,7 @@ class DynamicActiveRecord extends ActiveRecord
      *
      * @return null|\yii\db\Expression
      */
-    public static function dynColExpression($attrs)
-    {
+    public static function dynColExpression($attrs) {
         if (!$attrs) {
             return null;
         }
@@ -487,7 +502,7 @@ class DynamicActiveRecord extends ActiveRecord
     {
         $dynCol = static::dynamicColumn();
         if (isset($row[$dynCol])) {
-            $record->dynamicAttributes = static::dynColDecode($row[$dynCol]);
+            $record->_dynamicAttributes = static::dynColDecode($row[$dynCol]);
         }
         parent::populateRecord($record, $row);
     }
