@@ -46,7 +46,7 @@ class DynamicActiveRecord extends ActiveRecord
 {
     private $_dynamicAttributes = [];
 
-    protected static $_encoder;
+    private static $_encoder;
 
     /**
      * @return encoder\EncoderInterface
@@ -55,8 +55,8 @@ class DynamicActiveRecord extends ActiveRecord
      */
     public static function getDynamicEncoder()
     {
-        if (static::$_encoder !== null) {
-            return static::$_encoder;
+        if (self::$_encoder !== null) {
+            return self::$_encoder;
         }
         $driver = static::getDb()->getDriverName();
         $encoderMap = static::getEncoderMap();
@@ -66,7 +66,7 @@ class DynamicActiveRecord extends ActiveRecord
         $config = !is_array($encoderMap[$driver]) ? ['class' => $encoderMap[$driver]] : $encoderMap[$driver];
         $config['modelClass'] = static::className();
 
-        return static::$_encoder = Yii::createObject($config);
+        return self::$_encoder = Yii::createObject($config);
     }
 
     /**
