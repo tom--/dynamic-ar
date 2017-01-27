@@ -56,10 +56,13 @@ class PgsqlEncoder extends BaseEncoder
         $params = [];
 
         // todo For now we only have Maria. Add PgSQL and generic JSON.
-        static::encodeDynamicAttributeArray($attributes);
-        $sql = static::dynColSqlMaria($attributes, $params);
-
-        return new \yii\db\Expression($sql, $params);
+       // static::encodeDynamicAttributeArray($attributes);
+       $sql = json_encode($attributes); //simply encode attributes
+       // $sql = static::dynColSqlMaria($attributes, $params);
+       $sql='\''.$sql.'\''; //simply add ' ' before and after so pg accepts the value
+       return new \yii\db\Expression('(select CAST ('.$sql.' AS JSONB))', $params);
+       //return new \yii\db\Expression($sql,$params);
+       
     }
 
     /**
