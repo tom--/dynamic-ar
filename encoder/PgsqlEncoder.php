@@ -54,7 +54,6 @@ class PgsqlEncoder extends BaseEncoder
         }
 
         $params = [];
-
         // todo For now we only have Maria. Add PgSQL and generic JSON.
        // static::encodeDynamicAttributeArray($attributes);
        $sql = json_encode($attributes); //simply encode attributes
@@ -106,32 +105,32 @@ class PgsqlEncoder extends BaseEncoder
      * @return string SQL for a DB Expression
      * @throws \yii\base\Exception
      */
-    private static function dynColSqlMaria(array $attrs, & $params)
-    {
-        $sql = [];
-        foreach ($attrs as $key => $value) {
-            if (is_object($value) && !($value instanceof ValueExpression)) {
-                $value = method_exists($value, 'toArray') ? $value->toArray() : (array) $value;
-            }
-            if ($value === [] || $value === null) {
-                continue;
-            }
-
-            $phKey = static::placeholder();
-            $phValue = static::placeholder();
-            $sql[] = $phKey;
-            $params[$phKey] = $key;
-
-            if ($value instanceof ValueExpression || is_float($value)) {
-                $sql[] = $value;
-            } elseif (is_scalar($value)) {
-                $sql[] = $phValue;
-                $params[$phValue] = $value;
-            } elseif (is_array($value)) {
-                $sql[] = static::dynColSqlMaria($value, $params);
-            }
-        }
-
-        return $sql === [] ? 'null' : 'json_build_object(' . implode(',', $sql) . ')::jsonb';
-    }
+//    private static function dynColSqlPostgres(array $attrs, & $params)
+//    {
+//        $sql = [];
+//        foreach ($attrs as $key => $value) {
+//            if (is_object($value) && !($value instanceof ValueExpression)) {
+//                $value = method_exists($value, 'toArray') ? $value->toArray() : (array) $value;
+//            }
+//            if ($value === [] || $value === null) {
+//                continue;
+//            }
+//
+//            $phKey = static::placeholder();
+//            $phValue = static::placeholder();
+//            $sql[] = $phKey;
+//            $params[$phKey] = $key;
+//
+//            if ($value instanceof ValueExpression || is_float($value)) {
+//                $sql[] = $value;
+//            } elseif (is_scalar($value)) {
+//                $sql[] = $phValue;
+//                $params[$phValue] = $value;
+//            } elseif (is_array($value)) {
+//                $sql[] = static::dynColSqlPostgres($value, $params);
+//            }
+//        }
+//
+//        return $sql === [] ? 'null' : 'json_build_object(' . implode(',', $sql) . ')::jsonb';
+//    }
 }
