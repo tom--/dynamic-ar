@@ -38,10 +38,10 @@ $config = [
 //            'fixture' => __DIR__ . '/mssql.sql',
 //        ],
         'pgsql' => [
-            'dsn' => 'pgsql:host=localhost;dbname=yiitest;port=5432;',
-            'username' => 'postgres',
-            'password' => 'postgres',
-            'fixture' => __DIR__ . '/pgsql.sql',
+            'dsn' => 'pgsql:host=localhost;dbname=myyiitest;port=5432;',
+            'username' => 'tester',
+            'password' => 'tester',
+            'fixture' => __DIR__ . '/postgres.sql',
         ],
     ],
 ];

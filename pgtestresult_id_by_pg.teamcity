@@ -1,0 +1,568 @@
+
+##teamcity[testCount count='122' flowId='11505']
+
+##teamcity[testSuiteStarted name='tests\unit\DynamicActiveRecordPgsqlTest' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest' flowId='11505']
+
+##teamcity[testStarted name='testRead' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testRead' flowId='11505']
+
+##teamcity[testFinished name='testRead' duration='6280' flowId='11505']
+
+##teamcity[testStarted name='testTypes' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testTypes' flowId='11505']
+
+##teamcity[testFinished name='testTypes' duration='5950' flowId='11505']
+
+##teamcity[testStarted name='testAsArray' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testAsArray' flowId='11505']
+
+##teamcity[testFailed name='testAsArray' message='Failed asserting that an array has the subset Array &0 (|n    |'name|' => |'product1|'|n    |'int|' => 123|n    |'str|' => |'value1|'|n    |'bool|' => 1|n    |'float|' => 123.456|n    |'children|' => Array &1 (|n        |'int|' => 123|n        |'str|' => |'value1|'|n        |'bool|' => 1|n        |'float|' => 123.456|n    )|n).' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:114|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testAsArray' duration='5530' flowId='11505']
+
+##teamcity[testSuiteStarted name='testWriteRead' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #0' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #0' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #0' duration='6440' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #1' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #1' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #1' duration='3410' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #2' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #2' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #2' duration='2980' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #3' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #3' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #3' duration='3160' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #4' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #4' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #4' duration='2980' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #5' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #5' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #5' duration='2850' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #6' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #6' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #6' duration='3070' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #7' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #7' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #7' duration='3250' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #8' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #8' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #8' duration='3070' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #9' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #9' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #9' duration='2870' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #10' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #10' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #10' duration='2970' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #11' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #11' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #11' duration='3540' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #12' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #12' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #12' duration='3040' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #13' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #13' flowId='11505']
+
+##teamcity[testFailed name='testWriteRead with data set #13' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "quote"|nLINE 1: ...ALUES ((select CAST (|'{"string3":"string with a |' quote char...|n                                                             ^|nThe SQL being executed was: INSERT INTO "product" ("dynamic_columns") VALUES ((select CAST (|'{"string3":"string with a |' quote char in it"}|' AS JSONB))) RETURNING "id"' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/pgsql/Schema.php:530|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:494|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:461|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/BaseActiveRecord.php:635|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:239|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #13' duration='3160' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #14' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #14' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #14' duration='2890' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #15' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #15' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #15' duration='3370' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #16' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #16' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #16' duration='2920' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #17' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #17' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #17' duration='3340' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #18' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #18' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #18' duration='3230' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #19' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #19' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #19' duration='3200' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #20' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #20' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #20' duration='3140' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #21' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #21' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #21' duration='3160' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #22' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #22' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #22' duration='3570' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #23' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #23' flowId='11505']
+
+##teamcity[testFailed name='testWriteRead with data set #23' message='data name: fakeoctet|nFailed asserting that two strings are equal.' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:250|n /usr/local/bin/phpunit:581|n ' type='comparisonFailure' actual='Binary String: 0x4e18ac8ac9b2b2dae29e' expected='|'data:application/octet-stream;base64,This is my string|'' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #23' duration='3520' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #24' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #24' flowId='11505']
+
+##teamcity[testFailed name='testWriteRead with data set #24' message='data name: octet|nFailed asserting that two strings are equal.' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:250|n /usr/local/bin/phpunit:581|n ' type='comparisonFailure' actual='|'This is my string|'' expected='|'data:application/octet-stream;base64,VGhpcyBpcyBteSBzdHJpbmc=|'' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #24' duration='3050' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #25' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #25' flowId='11505']
+
+##teamcity[testFailed name='testWriteRead with data set #25' message='SQLSTATE|[22P02|]: Invalid text representation: 7 ERROR:  invalid input syntax for type json|nLINE 1: ...roduct" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSON...|n                                                             ^|nDETAIL:  The input string ended unexpectedly.|nCONTEXT:  JSON data, line 1: |nThe SQL being executed was: INSERT INTO "product" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSONB))) RETURNING "id"' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/pgsql/Schema.php:530|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:494|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:461|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/BaseActiveRecord.php:635|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:239|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #25' duration='3020' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #26' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #26' flowId='11505']
+
+##teamcity[testFailed name='testWriteRead with data set #26' message='data name: array0|n|'1|' does not match expected type "array".' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:250|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #26' duration='3020' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #27' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #27' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #27' duration='3170' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #28' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #28' flowId='11505']
+
+##teamcity[testFailed name='testWriteRead with data set #28' message='SQLSTATE|[22P02|]: Invalid text representation: 7 ERROR:  invalid input syntax for type json|nLINE 1: ...roduct" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSON...|n                                                             ^|nDETAIL:  The input string ended unexpectedly.|nCONTEXT:  JSON data, line 1: |nThe SQL being executed was: INSERT INTO "product" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSONB))) RETURNING "id"' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/pgsql/Schema.php:530|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:494|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:461|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/BaseActiveRecord.php:635|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:239|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #28' duration='3070' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #29' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #29' flowId='11505']
+
+##teamcity[testFailed name='testWriteRead with data set #29' message='SQLSTATE|[22P02|]: Invalid text representation: 7 ERROR:  invalid input syntax for type json|nLINE 1: ...roduct" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSON...|n                                                             ^|nDETAIL:  The input string ended unexpectedly.|nCONTEXT:  JSON data, line 1: |nThe SQL being executed was: INSERT INTO "product" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSONB))) RETURNING "id"' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/pgsql/Schema.php:530|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:494|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:461|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/BaseActiveRecord.php:635|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:239|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #29' duration='3040' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #30' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #30' flowId='11505']
+
+##teamcity[testFailed name='testWriteRead with data set #30' message='SQLSTATE|[22P02|]: Invalid text representation: 7 ERROR:  invalid input syntax for type json|nLINE 1: ...roduct" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSON...|n                                                             ^|nDETAIL:  The input string ended unexpectedly.|nCONTEXT:  JSON data, line 1: |nThe SQL being executed was: INSERT INTO "product" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSONB))) RETURNING "id"' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/pgsql/Schema.php:530|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:494|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:461|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/BaseActiveRecord.php:635|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:239|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #30' duration='3090' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #31' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #31' flowId='11505']
+
+##teamcity[testFailed name='testWriteRead with data set #31' message='SQLSTATE|[22P02|]: Invalid text representation: 7 ERROR:  invalid input syntax for type json|nLINE 1: ...roduct" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSON...|n                                                             ^|nDETAIL:  The input string ended unexpectedly.|nCONTEXT:  JSON data, line 1: |nThe SQL being executed was: INSERT INTO "product" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSONB))) RETURNING "id"' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/pgsql/Schema.php:530|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:494|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:461|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/BaseActiveRecord.php:635|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:239|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #31' duration='3390' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #32' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #32' flowId='11505']
+
+##teamcity[testFailed name='testWriteRead with data set #32' message='SQLSTATE|[22P02|]: Invalid text representation: 7 ERROR:  invalid input syntax for type json|nLINE 1: ...roduct" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSON...|n                                                             ^|nDETAIL:  The input string ended unexpectedly.|nCONTEXT:  JSON data, line 1: |nThe SQL being executed was: INSERT INTO "product" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSONB))) RETURNING "id"' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/pgsql/Schema.php:530|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:494|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:461|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/BaseActiveRecord.php:635|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:239|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #32' duration='3050' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #33' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #33' flowId='11505']
+
+##teamcity[testFailed name='testWriteRead with data set #33' message='SQLSTATE|[22P02|]: Invalid text representation: 7 ERROR:  invalid input syntax for type json|nLINE 1: ...roduct" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSON...|n                                                             ^|nDETAIL:  The input string ended unexpectedly.|nCONTEXT:  JSON data, line 1: |nThe SQL being executed was: INSERT INTO "product" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSONB))) RETURNING "id"' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/pgsql/Schema.php:530|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:494|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:461|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/BaseActiveRecord.php:635|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:239|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #33' duration='3000' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #34' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #34' flowId='11505']
+
+##teamcity[testFailed name='testWriteRead with data set #34' message='SQLSTATE|[22P02|]: Invalid text representation: 7 ERROR:  invalid input syntax for type json|nLINE 1: ...roduct" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSON...|n                                                             ^|nDETAIL:  The input string ended unexpectedly.|nCONTEXT:  JSON data, line 1: |nThe SQL being executed was: INSERT INTO "product" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSONB))) RETURNING "id"' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/pgsql/Schema.php:530|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:494|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:461|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/BaseActiveRecord.php:635|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:239|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #34' duration='3510' flowId='11505']
+
+##teamcity[testStarted name='testWriteRead with data set #35' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #35' flowId='11505']
+
+##teamcity[testFailed name='testWriteRead with data set #35' message='SQLSTATE|[22P02|]: Invalid text representation: 7 ERROR:  invalid input syntax for type json|nLINE 1: ...roduct" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSON...|n                                                             ^|nDETAIL:  The input string ended unexpectedly.|nCONTEXT:  JSON data, line 1: |nThe SQL being executed was: INSERT INTO "product" ("dynamic_columns") VALUES ((select CAST (|'|' AS JSONB))) RETURNING "id"' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/pgsql/Schema.php:530|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:494|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:461|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/BaseActiveRecord.php:635|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:239|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testWriteRead with data set #35' duration='3100' flowId='11505']
+
+##teamcity[testSuiteFinished name='testWriteRead' flowId='11505']
+
+##teamcity[testStarted name='testDynamicValueObects' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testDynamicValueObects' flowId='11505']
+
+##teamcity[testFailed name='testDynamicValueObects' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "str"|nLINE 1: ...olumns") VALUES ((select CAST (|'{"str":{"value":"|'str|'","typ...|n                                                             ^|nThe SQL being executed was: INSERT INTO "product" ("dynamic_columns") VALUES ((select CAST (|'{"str":{"value":"|'str|'","type":null},"char":{"value":"|'char|'","type":"CHAR"},"date":{"value":"|'1999-12-31|'","type":"DATE"},"datetime":{"value":"|'1999-12-31 23:59:59|'","type":"DATETIME"},"datetimeN":{"value":"\"1999-12-31 23:59:59.999999\"","type":"DATETIME(6)"},"time":{"value":"|'12:30:00|'","type":"TIME"},"timeD":{"value":"\"12:30:00.123456\"","type":"TIME(6)"},"int":{"value":432,"type":null},"integer":{"value":432,"type":"INTEGER"},"unsignedInt":{"value":321,"type":"UNSIGNED INTEGER"},"float":{"value":12.99,"type":null},"double":{"value":1.299e+31,"type":"DOUBLE"},"decimal":{"value":12.99,"type":"DECIMAL"},"decimalN":{"value":12.99,"type":"DECIMAL(6)"},"decimalND":{"value":12.99,"type":"DECIMAL(6,3)"}}|' AS JSONB))) RETURNING "id"' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/pgsql/Schema.php:530|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:494|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveRecord.php:461|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/BaseActiveRecord.php:635|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:301|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testDynamicValueObects' duration='3060' flowId='11505']
+
+##teamcity[testStarted name='testDotAttributes' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testDotAttributes' flowId='11505']
+
+##teamcity[testIgnored name='testDotAttributes' message='need to write assertions' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:312|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testDotAttributes' duration='3040' flowId='11505']
+
+##teamcity[testStarted name='testCustomColumns' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testCustomColumns' flowId='11505']
+
+##teamcity[testFailed name='testCustomColumns' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "AS"|nLINE 1: SELECT *, ((("dynamic_columns"->|'children|' AS CHAR)->|'int|' A...|n                                                   ^|nThe SQL being executed was: SELECT *, ((("dynamic_columns"->|'children|' AS CHAR)->|'int|' AS CHAR)*2) AS customColumn, "dynamic_columns" AS "dynamic_columns" FROM "product" WHERE "name"=|'product1|'' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:253|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveQuery.php:295|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:321|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testCustomColumns' duration='3030' flowId='11505']
+
+##teamcity[testStarted name='testCustomColumnsExpression' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testCustomColumnsExpression' flowId='11505']
+
+##teamcity[testFailed name='testCustomColumnsExpression' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "AS"|nLINE 1: SELECT *, ((("dynamic_columns"->|'children|' AS char)->|'int|' A...|n                                                   ^|nThe SQL being executed was: SELECT *, ((("dynamic_columns"->|'children|' AS char)->|'int|' AS char)*2) AS customColumn, "dynamic_columns" AS "dynamic_columns" FROM "product" WHERE "name"=|'product1|'' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:253|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveQuery.php:295|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:332|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testCustomColumnsExpression' duration='3210' flowId='11505']
+
+##teamcity[testStarted name='testStatisticalFind' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testStatisticalFind' flowId='11505']
+
+##teamcity[testFailed name='testStatisticalFind' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "AS"|nLINE 1: ...*) FROM "product" WHERE ("dynamic_columns"->|'int|' AS CHAR) =...|n                                                             ^|nThe SQL being executed was: SELECT COUNT(*) FROM "product" WHERE ("dynamic_columns"->|'int|' AS CHAR) = 123 OR ("dynamic_columns"->|'int|' AS CHAR) = 456' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:388|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:431|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveQuery.php:334|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:319|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:341|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testStatisticalFind' duration='3040' flowId='11505']
+
+##teamcity[testStarted name='testFindScalar' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindScalar' flowId='11505']
+
+##teamcity[testFailed name='testFindScalar' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "AS"|nLINE 1: SELECT (("dynamic_columns"->|'children|' AS CHAR)->|'str|' AS CH...|n                                               ^|nThe SQL being executed was: SELECT (("dynamic_columns"->|'children|' AS CHAR)->|'str|' AS CHAR) FROM "product" WHERE "id"=1' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:388|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:269|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:352|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testFindScalar' duration='3040' flowId='11505']
+
+##teamcity[testStarted name='testFindColumn' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindColumn' flowId='11505']
+
+##teamcity[testFailed name='testFindColumn' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "AS"|nLINE 1: SELECT ("dynamic_columns"->|'int|' AS int) FROM "product"|n                                         ^|nThe SQL being executed was: SELECT ("dynamic_columns"->|'int|' AS int) FROM "product"' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:405|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:285|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:366|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testFindColumn' duration='2980' flowId='11505']
+
+##teamcity[testStarted name='testFindBySql' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindBySql' flowId='11505']
+
+##teamcity[testFailed name='testFindBySql' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "AS"|nLINE 2: ...ROM product WHERE (("dynamic_columns"->|'children|' AS CHAR)->...|n                                                             ^|nThe SQL being executed was: SELECT *, COLUMN_JSON(dynamic_columns) AS dynamic_columns|n                FROM product WHERE (("dynamic_columns"->|'children|' AS CHAR)->|'str|' AS CHAR)=|'value1|'' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:253|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveQuery.php:295|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:382|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testFindBySql' duration='3480' flowId='11505']
+
+##teamcity[testStarted name='testFind' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFind' flowId='11505']
+
+##teamcity[testFailed name='testFind' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "AS"|nLINE 1: ...t" WHERE ("id"=$1) AND (("dynamic_columns"->|'str|' AS CHAR)=$...|n                                                             ^|nThe SQL being executed was: SELECT *, "dynamic_columns" AS "dynamic_columns" FROM "product" WHERE ("id"=1) AND (("dynamic_columns"->|'str|' AS CHAR)=|'value1|')' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:376|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:253|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveQuery.php:295|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/BaseActiveRecord.php:107|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:393|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testFind' duration='3150' flowId='11505']
+
+##teamcity[testStarted name='testFindAsArray' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindAsArray' flowId='11505']
+
+##teamcity[testFailed name='testFindAsArray' message='Failed asserting that two arrays are equal.' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/tests/framework/ar/ActiveRecordTestTrait.php:127|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:410|n /usr/local/bin/phpunit:581|n ' type='comparisonFailure' actual='Array (|n    |'id|' => 2|n    |'email|' => |'user2@example.com|'|n    |'name|' => |'user2|'|n    |'address|' => |'address2|'|n    |'status|' => 1|n    |'profile_id|' => null|n    |'bool_status|' => true|n)' expected='Array (|n    |'id|' => 2|n    |'email|' => |'user2@example.com|'|n    |'name|' => |'user2|'|n    |'address|' => |'address2|'|n    |'status|' => 1|n    |'profile_id|' => null|n)' flowId='11505']
+
+##teamcity[testFinished name='testFindAsArray' duration='3100' flowId='11505']
+
+##teamcity[testStarted name='testFindIndexBy' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindIndexBy' flowId='11505']
+
+##teamcity[testFinished name='testFindIndexBy' duration='3180' flowId='11505']
+
+##teamcity[testStarted name='testFindIndexByAsArray' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindIndexByAsArray' flowId='11505']
+
+##teamcity[testFinished name='testFindIndexByAsArray' duration='3120' flowId='11505']
+
+##teamcity[testStarted name='testRefresh' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testRefresh' flowId='11505']
+
+##teamcity[testFinished name='testRefresh' duration='3040' flowId='11505']
+
+##teamcity[testStarted name='testEquals' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testEquals' flowId='11505']
+
+##teamcity[testFinished name='testEquals' duration='3030' flowId='11505']
+
+##teamcity[testStarted name='testFindCount' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindCount' flowId='11505']
+
+##teamcity[testFailed name='testFindCount' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "AS"|nLINE 1: ...*) FROM "product" WHERE ("dynamic_columns"->|'int|' AS CHAR)=$...|n                                                             ^|nThe SQL being executed was: SELECT COUNT(*) FROM "product" WHERE ("dynamic_columns"->|'int|' AS CHAR)=123' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:388|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:431|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveQuery.php:334|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:319|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:531|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testFindCount' duration='3050' flowId='11505']
+
+##teamcity[testStarted name='testFindComplexCondition' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindComplexCondition' flowId='11505']
+
+##teamcity[testFailed name='testFindComplexCondition' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "AS"|nLINE 1: ...) FROM "product" WHERE (("dynamic_columns"->|'int|' AS CHAR)=$...|n                                                             ^|nThe SQL being executed was: SELECT COUNT(*) FROM "product" WHERE (("dynamic_columns"->|'int|' AS CHAR)=|'123|') OR (("dynamic_columns"->|'int|' AS CHAR)=|'456|')' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:388|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:431|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveQuery.php:334|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:319|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:541|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testFindComplexCondition' duration='3390' flowId='11505']
+
+##teamcity[testStarted name='testFindNullValues' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindNullValues' flowId='11505']
+
+##teamcity[testFailed name='testFindNullValues' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "AS"|nLINE 1: ...s" FROM "product" WHERE ("dynamic_columns"->|'int|' AS CHAR) I...|n                                                             ^|nThe SQL being executed was: SELECT *, "dynamic_columns" AS "dynamic_columns" FROM "product" WHERE ("dynamic_columns"->|'int|' AS CHAR) IS NULL' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:362|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:213|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveQuery.php:133|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:568|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testFindNullValues' duration='3020' flowId='11505']
+
+##teamcity[testStarted name='testExists' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testExists' flowId='11505']
+
+##teamcity[testFailed name='testExists' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "AS"|nLINE 1: ...M "product" WHERE (("dynamic_columns"->|'children|' AS CHAR)->...|n                                                             ^|nThe SQL being executed was: SELECT EXISTS(SELECT *, "dynamic_columns" AS "dynamic_columns" FROM "product" WHERE (("dynamic_columns"->|'children|' AS CHAR)->|'int|' AS CHAR)=123)' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:388|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:395|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:577|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testExists' duration='3260' flowId='11505']
+
+##teamcity[testStarted name='testFindLazy' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindLazy' flowId='11505']
+
+##teamcity[testFinished name='testFindLazy' duration='3440' flowId='11505']
+
+##teamcity[testStarted name='testFindEager' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindEager' flowId='11505']
+
+##teamcity[testFinished name='testFindEager' duration='2940' flowId='11505']
+
+##teamcity[testStarted name='testRelationsWhereDynamicColumnMissing' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testRelationsWhereDynamicColumnMissing' flowId='11505']
+
+##teamcity[testFinished name='testRelationsWhereDynamicColumnMissing' duration='2990' flowId='11505']
+
+##teamcity[testStarted name='testInsert' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testInsert' flowId='11505']
+
+##teamcity[testFinished name='testInsert' duration='3080' flowId='11505']
+
+##teamcity[testStarted name='testUpdate' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testUpdate' flowId='11505']
+
+##teamcity[testFinished name='testUpdate' duration='2990' flowId='11505']
+
+##teamcity[testStarted name='testUpdateAttributes' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testUpdateAttributes' flowId='11505']
+
+##teamcity[testFinished name='testUpdateAttributes' duration='3070' flowId='11505']
+
+##teamcity[testStarted name='testBooleanAttribute' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testBooleanAttribute' flowId='11505']
+
+##teamcity[testFailed name='testBooleanAttribute' message='SQLSTATE|[22P02|]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: "t"|nThe SQL being executed was: SELECT * FROM "customer" WHERE "status"=TRUE' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:362|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:213|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveQuery.php:133|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/tests/framework/ar/ActiveRecordTestTrait.php:1090|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:718|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testBooleanAttribute' duration='2910' flowId='11505']
+
+##teamcity[testStarted name='testFindEmptyInCondition' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindEmptyInCondition' flowId='11505']
+
+##teamcity[testFailed name='testFindEmptyInCondition' message='SQLSTATE|[42601|]: Syntax error: 7 ERROR:  syntax error at or near "AS"|nLINE 1: ...s" FROM "product" WHERE ("dynamic_columns"->|'int|' AS CHAR)=$...|n                                                             ^|nThe SQL being executed was: SELECT *, "dynamic_columns" AS "dynamic_columns" FROM "product" WHERE ("dynamic_columns"->|'int|' AS CHAR)=123' details=' /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:362|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:213|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveQuery.php:133|n /home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTest.php:742|n /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testFindEmptyInCondition' duration='3800' flowId='11505']
+
+##teamcity[testStarted name='testFindExists' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindExists' flowId='11505']
+
+##teamcity[testFinished name='testFindExists' duration='3080' flowId='11505']
+
+##teamcity[testStarted name='testCountWithFindBySql' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testCountWithFindBySql' flowId='11505']
+
+##teamcity[testIgnored name='testCountWithFindBySql' message='This test depends on "tests\unit\DynamicActiveRecordPgsqlTest::testFindBySql" to pass.' details=' /usr/local/bin/phpunit:581|n ' flowId='11505']
+
+##teamcity[testFinished name='testCountWithFindBySql' duration='0' flowId='11505']
+
+##teamcity[testStarted name='testFindLazyViaTable' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindLazyViaTable' flowId='11505']
+
+##teamcity[testFinished name='testFindLazyViaTable' duration='3560' flowId='11505']
+
+##teamcity[testStarted name='testFindEagerViaTable' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindEagerViaTable' flowId='11505']
+
+##teamcity[testFinished name='testFindEagerViaTable' duration='3750' flowId='11505']
+
+##teamcity[testStarted name='testDeeplyNestedTableRelation' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testDeeplyNestedTableRelation' flowId='11505']
+
+##teamcity[testFinished name='testDeeplyNestedTableRelation' duration='3350' flowId='11505']
+
+##teamcity[testStarted name='testDeeplyNestedTableRelation2' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testDeeplyNestedTableRelation2' flowId='11505']
+
+##teamcity[testFinished name='testDeeplyNestedTableRelation2' duration='3070' flowId='11505']
+
+##teamcity[testStarted name='testStoreNull' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testStoreNull' flowId='11505']
+
+##teamcity[testFinished name='testStoreNull' duration='2850' flowId='11505']
+
+##teamcity[testStarted name='testStoreEmpty' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testStoreEmpty' flowId='11505']
+
+##teamcity[testFinished name='testStoreEmpty' duration='3040' flowId='11505']
+
+##teamcity[testStarted name='testIsPrimaryKey' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testIsPrimaryKey' flowId='11505']
+
+##teamcity[testFinished name='testIsPrimaryKey' duration='2860' flowId='11505']
+
+##teamcity[testStarted name='testJoinWith' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testJoinWith' flowId='11505']
+
+##teamcity[testFinished name='testJoinWith' duration='3060' flowId='11505']
+
+##teamcity[testStarted name='testJoinWithAndScope' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testJoinWithAndScope' flowId='11505']
+
+##teamcity[testFinished name='testJoinWithAndScope' duration='3130' flowId='11505']
+
+##teamcity[testStarted name='testJoinWithVia' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testJoinWithVia' flowId='11505']
+
+##teamcity[testFinished name='testJoinWithVia' duration='3380' flowId='11505']
+
+##teamcity[testSuiteStarted name='testJoinWithAlias' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testJoinWithAlias' flowId='11505']
+
+##teamcity[testStarted name='testJoinWithAlias with data set #0' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testJoinWithAlias with data set #0' flowId='11505']
+
+##teamcity[testFinished name='testJoinWithAlias with data set #0' duration='3290' flowId='11505']
+
+##teamcity[testSuiteFinished name='testJoinWithAlias' flowId='11505']
+
+##teamcity[testStarted name='testJoinWithSameTable' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testJoinWithSameTable' flowId='11505']
+
+##teamcity[testFinished name='testJoinWithSameTable' duration='3880' flowId='11505']
+
+##teamcity[testStarted name='testFindCompositeRelationWithJoin' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindCompositeRelationWithJoin' flowId='11505']
+
+##teamcity[testFinished name='testFindCompositeRelationWithJoin' duration='2850' flowId='11505']
+
+##teamcity[testStarted name='testFindSimpleRelationWithJoin' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindSimpleRelationWithJoin' flowId='11505']
+
+##teamcity[testFinished name='testFindSimpleRelationWithJoin' duration='3050' flowId='11505']
+
+##teamcity[testSuiteStarted name='testRelationWhereParams' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testRelationWhereParams' flowId='11505']
+
+##teamcity[testStarted name='testRelationWhereParams with data set #0' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testRelationWhereParams with data set #0' flowId='11505']
+
+##teamcity[testFinished name='testRelationWhereParams with data set #0' duration='2910' flowId='11505']
+
+##teamcity[testStarted name='testRelationWhereParams with data set #1' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testRelationWhereParams with data set #1' flowId='11505']
+
+##teamcity[testFinished name='testRelationWhereParams with data set #1' duration='3110' flowId='11505']
+
+##teamcity[testStarted name='testRelationWhereParams with data set #2' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testRelationWhereParams with data set #2' flowId='11505']
+
+##teamcity[testFinished name='testRelationWhereParams with data set #2' duration='3040' flowId='11505']
+
+##teamcity[testStarted name='testRelationWhereParams with data set #3' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testRelationWhereParams with data set #3' flowId='11505']
+
+##teamcity[testFinished name='testRelationWhereParams with data set #3' duration='3000' flowId='11505']
+
+##teamcity[testSuiteFinished name='testRelationWhereParams' flowId='11505']
+
+##teamcity[testStarted name='testAlias' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testAlias' flowId='11505']
+
+##teamcity[testFinished name='testAlias' duration='3410' flowId='11505']
+
+##teamcity[testStarted name='testInverseOf' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testInverseOf' flowId='11505']
+
+##teamcity[testFinished name='testInverseOf' duration='3140' flowId='11505']
+
+##teamcity[testStarted name='testInverseOfDynamic' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testInverseOfDynamic' flowId='11505']
+
+##teamcity[testFinished name='testInverseOfDynamic' duration='3190' flowId='11505']
+
+##teamcity[testStarted name='testDefaultValues' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testDefaultValues' flowId='11505']
+
+##teamcity[testFinished name='testDefaultValues' duration='3060' flowId='11505']
+
+##teamcity[testStarted name='testUnlinkAllViaTable' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testUnlinkAllViaTable' flowId='11505']
+
+##teamcity[testFinished name='testUnlinkAllViaTable' duration='3100' flowId='11505']
+
+##teamcity[testStarted name='testCastValues' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testCastValues' flowId='11505']
+
+##teamcity[testFinished name='testCastValues' duration='3570' flowId='11505']
+
+##teamcity[testStarted name='testIssues' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testIssues' flowId='11505']
+
+##teamcity[testFinished name='testIssues' duration='4750' flowId='11505']
+
+##teamcity[testStarted name='testPopulateRecordCallWhenQueryingOnParentClass' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testPopulateRecordCallWhenQueryingOnParentClass' flowId='11505']
+
+##teamcity[testFinished name='testPopulateRecordCallWhenQueryingOnParentClass' duration='2930' flowId='11505']
+
+##teamcity[testStarted name='testSaveEmpty' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testSaveEmpty' flowId='11505']
+
+##teamcity[testFinished name='testSaveEmpty' duration='2840' flowId='11505']
+
+##teamcity[testStarted name='testOptimisticLock' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testOptimisticLock' flowId='11505']
+
+##teamcity[testFinished name='testOptimisticLock' duration='3380' flowId='11505']
+
+##teamcity[testStarted name='testPopulateWithoutPk' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testPopulateWithoutPk' flowId='11505']
+
+##teamcity[testFinished name='testPopulateWithoutPk' duration='3270' flowId='11505']
+
+##teamcity[testStarted name='testBit' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testBit' flowId='11505']
+
+##teamcity[testFinished name='testBit' duration='3260' flowId='11505']
+
+##teamcity[testStarted name='testLinkWhenRelationIsIndexed2' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testLinkWhenRelationIsIndexed2' flowId='11505']
+
+##teamcity[testFinished name='testLinkWhenRelationIsIndexed2' duration='2890' flowId='11505']
+
+##teamcity[testStarted name='testLinkWhenRelationIsIndexed3' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testLinkWhenRelationIsIndexed3' flowId='11505']
+
+##teamcity[testFinished name='testLinkWhenRelationIsIndexed3' duration='2910' flowId='11505']
+
+##teamcity[testStarted name='testEmulateExecution' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testEmulateExecution' flowId='11505']
+
+##teamcity[testFinished name='testEmulateExecution' duration='3620' flowId='11505']
+
+##teamcity[testStarted name='testUnlinkAllOnCondition' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testUnlinkAllOnCondition' flowId='11505']
+
+##teamcity[testFinished name='testUnlinkAllOnCondition' duration='3420' flowId='11505']
+
+##teamcity[testStarted name='testUnlinkAllOnConditionViaTable' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testUnlinkAllOnConditionViaTable' flowId='11505']
+
+##teamcity[testFinished name='testUnlinkAllOnConditionViaTable' duration='2960' flowId='11505']
+
+##teamcity[testStarted name='testHasAttribute' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testHasAttribute' flowId='11505']
+
+##teamcity[testFinished name='testHasAttribute' duration='2890' flowId='11505']
+
+##teamcity[testStarted name='testFindLimit' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindLimit' flowId='11505']
+
+##teamcity[testFinished name='testFindLimit' duration='2890' flowId='11505']
+
+##teamcity[testStarted name='testFindLazyVia' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindLazyVia' flowId='11505']
+
+##teamcity[testFinished name='testFindLazyVia' duration='3180' flowId='11505']
+
+##teamcity[testStarted name='testFindLazyVia2' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindLazyVia2' flowId='11505']
+
+##teamcity[testFinished name='testFindLazyVia2' duration='3000' flowId='11505']
+
+##teamcity[testStarted name='testFindEagerViaRelation' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindEagerViaRelation' flowId='11505']
+
+##teamcity[testFinished name='testFindEagerViaRelation' duration='3000' flowId='11505']
+
+##teamcity[testStarted name='testFindNestedRelation' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindNestedRelation' flowId='11505']
+
+##teamcity[testFinished name='testFindNestedRelation' duration='3200' flowId='11505']
+
+##teamcity[testStarted name='testFindEagerViaRelationPreserveOrder' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindEagerViaRelationPreserveOrder' flowId='11505']
+
+##teamcity[testFinished name='testFindEagerViaRelationPreserveOrder' duration='3050' flowId='11505']
+
+##teamcity[testStarted name='testFindEagerViaRelationPreserveOrderB' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindEagerViaRelationPreserveOrderB' flowId='11505']
+
+##teamcity[testFinished name='testFindEagerViaRelationPreserveOrderB' duration='3050' flowId='11505']
+
+##teamcity[testStarted name='testLink' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testLink' flowId='11505']
+
+##teamcity[testFinished name='testLink' duration='3580' flowId='11505']
+
+##teamcity[testStarted name='testUnlink' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testUnlink' flowId='11505']
+
+##teamcity[testFinished name='testUnlink' duration='3020' flowId='11505']
+
+##teamcity[testStarted name='testUnlinkAll' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testUnlinkAll' flowId='11505']
+
+##teamcity[testFinished name='testUnlinkAll' duration='3120' flowId='11505']
+
+##teamcity[testStarted name='testUnlinkAllAndConditionSetNull' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testUnlinkAllAndConditionSetNull' flowId='11505']
+
+##teamcity[testFinished name='testUnlinkAllAndConditionSetNull' duration='3830' flowId='11505']
+
+##teamcity[testStarted name='testUnlinkAllAndConditionDelete' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testUnlinkAllAndConditionDelete' flowId='11505']
+
+##teamcity[testFinished name='testUnlinkAllAndConditionDelete' duration='3040' flowId='11505']
+
+##teamcity[testStarted name='testExplicitPkOnAutoIncrement' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testExplicitPkOnAutoIncrement' flowId='11505']
+
+##teamcity[testFinished name='testExplicitPkOnAutoIncrement' duration='3050' flowId='11505']
+
+##teamcity[testStarted name='testUpdateCounters' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testUpdateCounters' flowId='11505']
+
+##teamcity[testFinished name='testUpdateCounters' duration='3090' flowId='11505']
+
+##teamcity[testStarted name='testDelete' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testDelete' flowId='11505']
+
+##teamcity[testFinished name='testDelete' duration='3040' flowId='11505']
+
+##teamcity[testStarted name='testAfterFind' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testAfterFind' flowId='11505']
+
+##teamcity[testFinished name='testAfterFind' duration='3100' flowId='11505']
+
+##teamcity[testStarted name='testAfterRefresh' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testAfterRefresh' flowId='11505']
+
+##teamcity[testFinished name='testAfterRefresh' duration='3140' flowId='11505']
+
+##teamcity[testStarted name='testFindEagerIndexBy' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testFindEagerIndexBy' flowId='11505']
+
+##teamcity[testFinished name='testFindEagerIndexBy' duration='3040' flowId='11505']
+
+##teamcity[testStarted name='testAttributeAccess' locationHint='php_qn:///home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php::\tests\unit\DynamicActiveRecordPgsqlTest::testAttributeAccess' flowId='11505']
+
+##teamcity[testFinished name='testAttributeAccess' duration='3380' flowId='11505']
+
+##teamcity[testSuiteFinished name='tests\unit\DynamicActiveRecordPgsqlTest' flowId='11505']
