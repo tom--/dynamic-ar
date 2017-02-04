@@ -39,8 +39,8 @@ $config = [
 //        ],
         'pgsql' => [
             'dsn' => 'pgsql:host=localhost;dbname=myyiitest;port=5432;',
-            'username' => 'tester',
-            'password' => 'tester',
+            'username' => 'postgres',
+            'password' => '#postgres#',
             'fixture' => __DIR__ . '/postgres.sql',
         ],
     ],

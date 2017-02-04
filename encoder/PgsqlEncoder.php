@@ -23,13 +23,13 @@ class PgsqlEncoder extends BaseEncoder
     {
         $modelClass = $this->modelClass;
        // $sql = '[[' . $modelClass::dynamicColumn() . ']]';
-        $sql=str_replace(".",",",$name);
+        $sql=str_replace(".","','",$name);
 //        foreach (explode('.', $name) as $column) {
 //           // $sql = "($sql->'$column' ::jsonb)";
 //            $sql=$name.',';
 //        }
-
-        return $modelClass::dynamicColumn().' #>\'{'.$sql.'}\'';
+       return 'jsonb_extract_path('.$modelClass::dynamicColumn().',\''.$sql.'\')';
+       // return $modelClass::dynamicColumn().' #>\'{'.$sql.'}\'';
     }
 //    public function dynamicAttributeExpression($name, $type = 'char')
 //    {
@@ -51,7 +51,6 @@ class PgsqlEncoder extends BaseEncoder
     {
         $modelClass = $this->modelClass;
         return '[[' . $modelClass::dynamicColumn() . ']]';
-       // return 'pipes';
     }
 
     /**

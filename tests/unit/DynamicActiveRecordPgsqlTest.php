@@ -9,7 +9,7 @@ namespace tests\unit;
 
 use Yii;
 // use tests\unit\data\dar\Product;
-class DynamicActiveRecordPgsqlTest extends DynamicActiveRecordTest
+class DynamicActiveRecordPgsqlTest extends DynamicActiveRecordTestPgJson
 {
     protected $driverName = 'pgsql';
 }
