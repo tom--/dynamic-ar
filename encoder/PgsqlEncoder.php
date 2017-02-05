@@ -19,7 +19,7 @@ class PgsqlEncoder extends BaseEncoder
      *
      * @return string a SQL expression
      */
-        public function dynamicAttributeExpression($name, $type="char")
+        public function dynamicAttributeExpression($name, $type)
     {
         $modelClass = $this->modelClass;
        // $sql = '[[' . $modelClass::dynamicColumn() . ']]';
