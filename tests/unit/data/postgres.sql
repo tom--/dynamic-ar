@@ -291,13 +291,13 @@ INSERT INTO "product" (name, dynamic_columns) VALUES (
         "str": "value1",
         "int": 123,
         "float": 123.456,
-        "bool": 1,
+        "bool": true,
         "null": null,
         "children": {
             "str": "value1",
             "int": 123,
             "float": 123.456,
-            "bool": 1,
+            "bool": true,
             "null": null
         }
     }'::jsonb);

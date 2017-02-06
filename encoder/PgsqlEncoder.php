@@ -24,9 +24,9 @@ class PgsqlEncoder extends BaseEncoder
         $modelClass = $this->modelClass;
        // $sql = '[[' . $modelClass::dynamicColumn() . ']]';
         $sql=str_replace(".","','",$name);
+      
+           return 'jsonb_extract_path('.$modelClass::dynamicColumn().',\''.$sql.'\')::jsonb';
        
-       return 'jsonb_extract_path('.$modelClass::dynamicColumn().',\''.$sql.'\')';
-
     }
 //    public function dynamicAttributeExpression($name, $type = 'char')
 //    {
