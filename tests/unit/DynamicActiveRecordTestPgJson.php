@@ -89,7 +89,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
     }
 
     public function testAsArray()
-    {     //unfortunately this test is fails
+    {     //unfortunately this test  fails
         /** @var Product $product */
         $product = Product::findOne(1);
         $expect = [
@@ -265,9 +265,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
             'integer' => 432,
             'unsignedInt' => 321,
             'float' => 12.99,
-            // https://mariadb.atlassian.net/browse/MDEV-8521
-//will not work all numbers are stored in their "normal" form in json            'double' => '1.3e31',
-            'double'=>98989894384938492323,
+            'double'=>'9.89898943849385E+19', //see https://www.postgresql.org/docs/9.4/static/datatype-json.html section 8.14.1
             'decimal' => 12.99,
             'decimalN' => 12.99,
             'decimalND' => 12.99,
@@ -275,27 +273,27 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
 
         $p = new Product([
             //'str' => new ValueExpression("'str'"),
-            'str'=>'str',
+            'str'=>json_encode('str'),
             //'char' => new ValueExpression("'char'", 'CHAR'),
-            'char'=>'char',
-            'date'=>'1999-12-31',
+            'char'=>json_encode('char'),
+            'date'=>json_encode('1999-12-31'),
           // 'date' => new ValueExpression("'1999-12-31'", 'DATE'),
           //'datetime' => new ValueExpression("'1999-12-31 23:59:59'", 'DATETIME'),
-            'datetime' =>'1999-12-31 23:59:59',
+            'datetime' =>json_encode('1999-12-31 23:59:59'),
          //  'datetimeN' => new ValueExpression('"1999-12-31 23:59:59.999999"', 'DATETIME(6)'),
-            'datetimeN' =>'1999-12-31 23:59:59.999999',
-            'time'=>'12:30:00',
+            'datetimeN' =>json_encode('1999-12-31 23:59:59.999999'),
+            'time'=>json_encode('12:30:00'),
          // 'time' => new ValueExpression("'12:30:00'", 'TIME'),
          // 'timeD' => new ValueExpression('"12:30:00.123456"', 'TIME(6)'),
-            'timeD' => '12:30:00.123456',
-            'int' =>432,
-            'integer' => 432,
-            'unsignedInt' => 321,
-            'float' => 12.99,
-            'double' => 98989894384938492323,
-            'decimal' => 12.99,
-            'decimalN' => 12.99,
-            'decimalND' => 12.99,
+            'timeD' => json_encode('12:30:00.123456'),
+            'int' =>json_encode(432),
+            'integer' => json_encode(432),
+            'unsignedInt' => json_encode(321),
+            'float' => json_encode(12.99),
+            'double' => json_encode(98989894384938492),
+            'decimal' => json_encode(12.99),
+            'decimalN' => json_encode(12.99),
+            'decimalND' => json_encode(12.99),
 // https://mariadb.atlassian.net/browse/MDEV-8526
 //            'charN' => new ValueExpression("'charN'", 'CHAR(10)'),
 //            'bin' => new ValueExpression('unhex("cafebabebada55")', 'BINARY'),
