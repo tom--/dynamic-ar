@@ -549,21 +549,21 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
     {
         parent::testFindComplexCondition();
 
-        $this->assertEquals(2, Product::find()->where(['OR', ['(!int!)' => '123'], ['(!int!)' => '456']])->count());
+        $this->assertEquals(2, Product::find()->where(['OR', ['(!int!)::text::numeric' => 123], ['(!int!)::text::numeric' => 456]])->count());
         $this->assertEquals(2,
-            count(Product::find()->where(['OR', ['(!int!)' => '123'], ['(!int!)' => '456']])->all()));
+            count(Product::find()->where(['OR', ['(!int!)::text::numeric' => 123], ['(!int!)::text::numeric' => 456]])->all()));
 
-        $this->assertEquals(2, Product::find()->where(['(!children.str!)::text' => ['value1', 'value3']])->count());
-        $this->assertEquals(2, count(Product::find()->where(['(!children.str!)::text' => ['value1', 'value3']])->all()));
+        $this->assertEquals(2, Product::find()->where(['(!children.str!)::text' => ['"value1"', '"value3"']])->count());
+        $this->assertEquals(2, count(Product::find()->where(['(!children.str!)::text' => ['"value1"', '"value3"']])->all()));
 
         $this->assertEquals(1, Product::find()->where([
             'AND',
-            ['(!children.str!)::textppp' => ['"value1"', '"value3"']],
+            ['(!children.str!)::text' => ['"value1"', '"value3"']],
             ['BETWEEN', '(!int!)::text::numeric', 122, 124]
         ])->count());
         $this->assertEquals(1, count(Product::find()->where([
             'AND',
-            ['(!children.str!)::textppp' => ['"value1"', '"value3"']],
+            ['(!children.str!)::text' => ['"value1"', '"value3"']],
             ['BETWEEN', '(!int!)::text::numeric', 122, 124]
         ])->all()));
     }
