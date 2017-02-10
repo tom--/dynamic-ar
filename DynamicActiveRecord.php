@@ -154,9 +154,9 @@ class DynamicActiveRecord extends ActiveRecord
                 return null;
             }
             $ref = &$ref[$key];
-        }
-
-        return $ref;
+        }  
+        
+         return $ref;
     }
 
     /**

@@ -341,13 +341,3 @@ INSERT INTO "supplier" (name, dynamic_columns) VALUES (
             "country": "england"
         }
     }'::jsonb);
-
-INSERT INTO "supplier" (name, dynamic_columns) VALUES (
-    'binary',
-    '{
-        "name": "c1c2c3c4c5c6"
-    }'::jsonb);
-
-INSERT INTO "missing_dyn_column" (name) VALUES (
-    'one'
-   );
