@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" tests="120" assertions="942" failures="2" errors="1" time="329.291931">
+    <testcase name="testRead" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="65" assertions="2" time="5.886591"/>
+    <testcase name="testTypes" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="74" assertions="10" time="5.219851"/>
+    <testcase name="testAsArray" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="90" assertions="2" time="5.219582">
+      <system-out>Array
+(
+    [id] =&gt; 1
+    [name] =&gt; product1
+    [dynamic_columns] =&gt; {"int": 123, "str": "value1", "bool": true, "null": null, "float": 123.456, "children": {"int": 123, "str": "value1", "bool": true, "null": null, "float": 123.456}, "supplier_id": 1}
+    [int] =&gt; 123
+    [str] =&gt; value1
+    [bool] =&gt; 1
+    [null] =&gt; 
+    [float] =&gt; 123.456
+    [children] =&gt; Array
+        (
+            [int] =&gt; 123
+            [str] =&gt; value1
+            [bool] =&gt; 1
+            [null] =&gt; 
+            [float] =&gt; 123.456
+        )
+
+    [supplier_id] =&gt; 1
+)
+</system-out>
+    </testcase>
+    <testsuite name="tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead" tests="35" assertions="35" failures="1" errors="0" time="96.157351">
+      <testcase name="testWriteRead with data set #0" assertions="1" time="5.196210"/>
+      <testcase name="testWriteRead with data set #1" assertions="1" time="2.874281"/>
+      <testcase name="testWriteRead with data set #2" assertions="1" time="2.721005"/>
+      <testcase name="testWriteRead with data set #3" assertions="1" time="2.776279"/>
+      <testcase name="testWriteRead with data set #4" assertions="1" time="2.610373"/>
+      <testcase name="testWriteRead with data set #5" assertions="1" time="2.608325"/>
+      <testcase name="testWriteRead with data set #6" assertions="1" time="2.699035"/>
+      <testcase name="testWriteRead with data set #7" assertions="1" time="2.565804"/>
+      <testcase name="testWriteRead with data set #8" assertions="1" time="2.653681"/>
+      <testcase name="testWriteRead with data set #9" assertions="1" time="2.619038"/>
+      <testcase name="testWriteRead with data set #10" assertions="1" time="2.667948"/>
+      <testcase name="testWriteRead with data set #11" assertions="1" time="2.575299"/>
+      <testcase name="testWriteRead with data set #12" assertions="1" time="2.886778"/>
+      <testcase name="testWriteRead with data set #13" assertions="1" time="2.674846"/>
+      <testcase name="testWriteRead with data set #14" assertions="1" time="2.668102"/>
+      <testcase name="testWriteRead with data set #15" assertions="1" time="2.586214"/>
+      <testcase name="testWriteRead with data set #16" assertions="1" time="3.208152"/>
+      <testcase name="testWriteRead with data set #17" assertions="1" time="2.675903"/>
+      <testcase name="testWriteRead with data set #18" assertions="1" time="2.574612"/>
+      <testcase name="testWriteRead with data set #19" assertions="1" time="2.598590"/>
+      <testcase name="testWriteRead with data set #20" assertions="1" time="2.630975"/>
+      <testcase name="testWriteRead with data set #21" assertions="1" time="2.629633"/>
+      <testcase name="testWriteRead with data set #22" assertions="1" time="2.565860"/>
+      <testcase name="testWriteRead with data set #23" assertions="1" time="2.620801"/>
+      <testcase name="testWriteRead with data set #24" assertions="1" time="2.598660"/>
+      <testcase name="testWriteRead with data set #25" assertions="1" time="2.997879">
+        <failure type="PHPUnit_Framework_ExpectationFailedException">tests\unit\DynamicActiveRecordPgsqlTest::testWriteRead with data set #25 ('array0', array(array(1)))
+data name: array0
+'1' does not match expected type "array".
+
+/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTestPgJson.php:252
+/usr/local/bin/phpunit:581
+</failure>
+      </testcase>
+      <testcase name="testWriteRead with data set #26" assertions="1" time="2.673895"/>
+      <testcase name="testWriteRead with data set #27" assertions="1" time="2.574929"/>
+      <testcase name="testWriteRead with data set #28" assertions="1" time="2.687956"/>
+      <testcase name="testWriteRead with data set #29" assertions="1" time="2.675972"/>
+      <testcase name="testWriteRead with data set #30" assertions="1" time="2.603233"/>
+      <testcase name="testWriteRead with data set #31" assertions="1" time="2.588749"/>
+      <testcase name="testWriteRead with data set #32" assertions="1" time="2.638824"/>
+      <testcase name="testWriteRead with data set #33" assertions="1" time="2.621261"/>
+      <testcase name="testWriteRead with data set #34" assertions="1" time="2.608249"/>
+    </testsuite>
+    <testcase name="testDynamicValueObects" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="256" assertions="1" time="2.622574"/>
+    <testcase name="testCustomColumns" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="315" assertions="4" time="2.660198"/>
+    <testcase name="testCustomColumnsExpression" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="326" assertions="2" time="3.222038"/>
+    <testcase name="testStatisticalFind" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="338" assertions="11" time="2.690906"/>
+    <testcase name="testFindScalar" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="348" assertions="4" time="2.571604"/>
+    <testcase name="testFindColumn" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="365" assertions="4" time="2.623771"/>
+    <testcase name="testFindBySql" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="375" assertions="8" time="2.707651"/>
+    <testcase name="testFind" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="391" assertions="27" time="2.606448"/>
+    <testcase name="testFindAsArray" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="411" assertions="1" time="2.652608">
+      <failure type="PHPUnit_Framework_ExpectationFailedException">tests\unit\DynamicActiveRecordPgsqlTest::testFindAsArray
+Failed asserting that two arrays are equal.
+--- Expected
++++ Actual
+@@ @@
+     'profile_id' =&gt; null
++    'bool_status' =&gt; true
+ )
+
+/home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/tests/framework/ar/ActiveRecordTestTrait.php:127
+/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTestPgJson.php:413
+/usr/local/bin/phpunit:581
+</failure>
+    </testcase>
+    <testcase name="testFindIndexBy" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="440" assertions="16" time="2.538452"/>
+    <testcase name="testFindIndexByAsArray" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="461" assertions="52" time="2.694583"/>
+    <testcase name="testRefresh" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="497" assertions="7" time="2.610680"/>
+    <testcase name="testEquals" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="512" assertions="8" time="2.592291"/>
+    <testcase name="testFindCount" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="528" assertions="14" time="2.571830"/>
+    <testcase name="testFindComplexCondition" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="540" assertions="12" time="2.747178"/>
+    <testcase name="testFindNullValues" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="563" assertions="4" time="2.629103"/>
+    <testcase name="testExists" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="576" assertions="11" time="3.169431"/>
+    <testcase name="testFindLazy" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="586" assertions="18" time="2.728232"/>
+    <testcase name="testFindEager" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="606" assertions="24" time="2.674475"/>
+    <testcase name="testRelationsWhereDynamicColumnMissing" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="620" assertions="2" time="2.667768"/>
+    <testcase name="testInsert" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="630" assertions="14" time="2.650119"/>
+    <testcase name="testUpdate" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="658" assertions="20" time="3.078394"/>
+    <testcase name="testUpdateAttributes" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="690" assertions="10" time="2.591385"/>
+    <testcase name="testBooleanAttribute" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="719" assertions="2" time="2.738966">
+      <error type="yii\db\Exception">tests\unit\DynamicActiveRecordPgsqlTest::testBooleanAttribute
+yii\db\Exception: SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: "t"
+The SQL being executed was: SELECT * FROM "customer" WHERE "status"=TRUE
+
+/home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Schema.php:636
+/home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:917
+/home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Command.php:362
+/home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/Query.php:213
+/home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/framework/db/ActiveQuery.php:133
+/home/nexus/NetBeansProjects/yii2-dynamic-ar/vendor/yiisoft/yii2-dev/tests/framework/ar/ActiveRecordTestTrait.php:1090
+/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTestPgJson.php:721
+/usr/local/bin/phpunit:581
+</error>
+    </testcase>
+    <testcase name="testFindEmptyInCondition" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="741" assertions="8" time="3.006202"/>
+    <testcase name="testFindExists" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="103" assertions="4" time="2.566724"/>
+    <testcase name="testCountWithFindBySql" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="140" assertions="2" time="2.570117"/>
+    <testcase name="testFindLazyViaTable" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="148" assertions="7" time="2.583850"/>
+    <testcase name="testFindEagerViaTable" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="165" assertions="17" time="2.863090"/>
+    <testcase name="testDeeplyNestedTableRelation" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="199" assertions="6" time="2.494956"/>
+    <testcase name="testDeeplyNestedTableRelation2" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="220" assertions="9" time="2.637725"/>
+    <testcase name="testStoreNull" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="242" assertions="19" time="2.427831"/>
+    <testcase name="testStoreEmpty" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="290" assertions="3" time="2.742313"/>
+    <testcase name="testIsPrimaryKey" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="308" assertions="12" time="2.432096"/>
+    <testcase name="testJoinWith" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="325" assertions="88" time="2.639230"/>
+    <testcase name="testJoinWithAndScope" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="520" assertions="15" time="2.534953"/>
+    <testcase name="testJoinWithVia" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="555" assertions="0" time="2.544653"/>
+    <testsuite name="tests\unit\DynamicActiveRecordPgsqlTest::testJoinWithAlias" tests="1" assertions="60" failures="0" errors="0" time="2.539859">
+      <testcase name="testJoinWithAlias with data set #0" assertions="60" time="2.539859"/>
+    </testsuite>
+    <testcase name="testJoinWithSameTable" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="769" assertions="21" time="2.630346"/>
+    <testcase name="testFindCompositeRelationWithJoin" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="833" assertions="2" time="2.490632"/>
+    <testcase name="testFindSimpleRelationWithJoin" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="845" assertions="5" time="4.068033"/>
+    <testsuite name="tests\unit\DynamicActiveRecordPgsqlTest::testRelationWhereParams" tests="4" assertions="8" failures="0" errors="0" time="9.912301">
+      <testcase name="testRelationWhereParams with data set #0" assertions="2" time="2.529436"/>
+      <testcase name="testRelationWhereParams with data set #1" assertions="2" time="2.557507"/>
+      <testcase name="testRelationWhereParams with data set #2" assertions="2" time="2.400920"/>
+      <testcase name="testRelationWhereParams with data set #3" assertions="2" time="2.424438"/>
+    </testsuite>
+    <testcase name="testAlias" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="897" assertions="4" time="2.419874"/>
+    <testcase name="testInverseOf" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="918" assertions="26" time="2.480347"/>
+    <testcase name="testInverseOfDynamic" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="973" assertions="6" time="2.858453"/>
+    <testcase name="testDefaultValues" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="999" assertions="8" time="2.390235"/>
+    <testcase name="testUnlinkAllViaTable" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1029" assertions="11" time="2.506786"/>
+    <testcase name="testCastValues" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1063" assertions="6" time="2.449124"/>
+    <testcase name="testIssues" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1092" assertions="13" time="2.507609"/>
+    <testcase name="testPopulateRecordCallWhenQueryingOnParentClass" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1122" assertions="2" time="2.444642"/>
+    <testcase name="testSaveEmpty" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1134" assertions="2" time="2.416261"/>
+    <testcase name="testOptimisticLock" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1141" assertions="2" time="2.445086"/>
+    <testcase name="testPopulateWithoutPk" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1157" assertions="11" time="2.483279"/>
+    <testcase name="testBit" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1244" assertions="2" time="2.677464"/>
+    <testcase name="testLinkWhenRelationIsIndexed2" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1253" assertions="1" time="2.474391"/>
+    <testcase name="testLinkWhenRelationIsIndexed3" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1269" assertions="1" time="2.506291"/>
+    <testcase name="testEmulateExecution" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1303" assertions="11" time="2.489802"/>
+    <testcase name="testUnlinkAllOnCondition" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1363" assertions="4" time="2.492320"/>
+    <testcase name="testUnlinkAllOnConditionViaTable" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1394" assertions="4" time="2.721430"/>
+    <testcase name="testHasAttribute" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="149" assertions="10" time="2.598141"/>
+    <testcase name="testFindLimit" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="327" assertions="16" time="2.560405"/>
+    <testcase name="testFindLazyVia" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="488" assertions="4" time="2.607161"/>
+    <testcase name="testFindLazyVia2" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="502" assertions="1" time="2.572456"/>
+    <testcase name="testFindEagerViaRelation" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="514" assertions="6" time="2.602959"/>
+    <testcase name="testFindNestedRelation" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="530" assertions="17" time="2.677950"/>
+    <testcase name="testFindEagerViaRelationPreserveOrder" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="566" assertions="16" time="2.675332"/>
+    <testcase name="testFindEagerViaRelationPreserveOrderB" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="629" assertions="16" time="2.865963"/>
+    <testcase name="testLink" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="659" assertions="19" time="3.040065"/>
+    <testcase name="testUnlink" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="712" assertions="14" time="2.819238"/>
+    <testcase name="testUnlinkAll" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="765" assertions="22" time="2.614194"/>
+    <testcase name="testUnlinkAllAndConditionSetNull" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="831" assertions="8" time="2.708783"/>
+    <testcase name="testUnlinkAllAndConditionDelete" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="857" assertions="8" time="2.678470"/>
+    <testcase name="testExplicitPkOnAutoIncrement" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="910" assertions="3" time="2.612556"/>
+    <testcase name="testUpdateCounters" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1007" assertions="8" time="2.599909"/>
+    <testcase name="testDelete" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1038" assertions="7" time="2.577753"/>
+    <testcase name="testAfterFind" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1097" assertions="10" time="2.666295"/>
+    <testcase name="testAfterRefresh" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1154" assertions="2" time="2.611050"/>
+    <testcase name="testFindEagerIndexBy" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1194" assertions="9" time="2.628221"/>
+    <testcase name="testAttributeAccess" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="1219" assertions="21" time="2.602666"/>
+  </testsuite>
+</testsuites>
