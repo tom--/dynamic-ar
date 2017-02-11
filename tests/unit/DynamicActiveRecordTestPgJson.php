@@ -4,7 +4,6 @@
  * @copyright Copyright (c) 2015 Spinitron LLC
  * @license http://opensource.org/licenses/ISC
  */
-
 namespace tests\unit;
 
 use spinitron\dynamicAr\encoder\BaseEncoder;
@@ -21,6 +20,7 @@ use yii\db\Connection;
  */
 class DynamicActiveRecordTestPgJson extends ActiveRecordTest
 {
+
     /** @var Connection */
     protected $db;
 
@@ -56,8 +56,8 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         $offset = 0;
         foreach ($hex as $i => $line) {
             echo sprintf('%6X', $offset) . ' : '
-                . implode(' ', str_split(str_pad($line, 2 * $width), 2))
-                . ' [' . str_pad($chars[$i], $width) . ']' . $newline;
+            . implode(' ', str_split(str_pad($line, 2 * $width), 2))
+            . ' [' . str_pad($chars[$i], $width) . ']' . $newline;
             $offset += $width;
         }
     }
@@ -88,7 +88,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
     }
 
     public function testAsArray()
-    { 
+    {
         /** @var Product $product */
         $product = Product::findOne(1);
         $expect = [
@@ -104,15 +104,13 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
                 'float' => 123.456,
             ],
         ];
-    
+
         $this->assertArraySubset($expect, $product->toArray(), false);
-         //see https://github.com/sebastianbergmann/phpunit/issues/2069
-        $product->setAttribute('float',123.456 );
+        //see https://github.com/sebastianbergmann/phpunit/issues/2069
+        $product->setAttribute('float', 123.456);
 
         $product->save(false);
         $product2 = Product::findOne($product->id);
-        $toarray=$product2->toArray();
-        print_r($toarray);
         $this->assertArraySubset($expect, $product2->toArray(), false);
     }
 
@@ -181,8 +179,8 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         $data = [
             ['int', 1234],
             ['neg', -4321],
-            ['octal', 076543],
-            ['hex', 0xbada55],
+            ['octal', 076543], //this will become integer
+            ['hex', 0xbada55], // this will become text
             ['largeint', 2147483647],
             ['largerin', 9223372036854775807],
             ['neglargein', -2147483648],
@@ -245,10 +243,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         $product = Product::findOne($id);
 
         $this->assertEquals(
-            $value,
-            $product->$name,
-            'data name: ' . $name,
-            is_float($value) ? abs($value) / 10e+12 : 0
+            $value, $product->$name, 'data name: ' . $name, is_float($value) ? abs($value) / 10e+12 : 0
         );
         unset($product);
     }
@@ -267,7 +262,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
             'integer' => 432,
             'unsignedInt' => 321,
             'float' => 12.99,
-            'double'=>9.8989894384938E+16, //see https://www.postgresql.org/docs/9.4/static/datatype-json.html section 8.14.1
+            'double' => 9.8989894384938E+16, //see https://www.postgresql.org/docs/9.4/static/datatype-json.html section 8.14.1
             'decimal' => 12.99,
             'decimalN' => 12.99,
             'decimalND' => 12.99,
@@ -275,13 +270,13 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
 
         $p = new Product([
             'str' => 'str',
-            'char'=>'char',
-            'date'=>'1999-12-31',
-            'datetime' =>'1999-12-31 23:59:59',
-            'datetimeN' =>'1999-12-31 23:59:59.999999',
-            'time'=>'12:30:00',
+            'char' => 'char',
+            'date' => '1999-12-31',
+            'datetime' => '1999-12-31 23:59:59',
+            'datetimeN' => '1999-12-31 23:59:59.999999',
+            'time' => '12:30:00',
             'timeD' => '12:30:00.123456',
-            'int' =>432,
+            'int' => 432,
             'integer' => 432,
             'unsignedInt' => 321,
             'float' => 12.99,
@@ -302,7 +297,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         $p->save(false);
 
         $actual = Product::findOne($p->id)->toArray();
-        $this->assertArraySubset($expected, $actual,false);
+        $this->assertArraySubset($expected, $actual, false);
     }
 
     public function testDotAttributes()
@@ -318,7 +313,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
 
         // find custom column
         $customer = Product::find()->select(['*', '((!children.int|numeric!) *2) AS [[customColumn]]'])
-            ->where(['name' => 'product1'])->one();
+                ->where(['name' => 'product1'])->one();
         $this->assertEquals(1, $customer->id);
         $this->assertEquals(246, $customer->customColumn);
     }
@@ -328,7 +323,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         // find custom column
         //not sure if this is something "workable" as an 'end user solution"
         $customer = Product::find()
-            ->select(['*', '(' . Product::columnExpression('children.int|numeric') . ' *2) AS [[customColumn]]'])           
+            ->select(['*', '(' . Product::columnExpression('children.int|numeric') . ' *2) AS [[customColumn]]'])
             ->where(['name' => 'product1'])
             ->one();
         $this->assertEquals(1, $customer->id);
@@ -339,10 +334,10 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
     {
         parent::testStatisticalFind();
 
-        $this->assertEquals(2, Product::find()->where('(!int!)::text::numeric = 123 OR (!int!)::text::numeric = 456')->count());
-        $this->assertEquals(123, Product::find()->min('(!int!)::text::numeric'));
-        $this->assertEquals(792, Product::find()->max('(!int!)::text::numeric'));
-        $this->assertEquals(457, Product::find()->average('(!int!)::text::numeric'));
+        $this->assertEquals(2, Product::find()->where('(!int|numeric!) = 123 OR (!int|numeric!) = 456')->count());
+        $this->assertEquals(123, Product::find()->min('(!int|numeric!)'));
+        $this->assertEquals(792, Product::find()->max('(!int|numeric!)'));
+        $this->assertEquals(457, Product::find()->average('(!int|numeric!)'));
     }
 
     public function testFindScalar()
@@ -354,10 +349,8 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         $this->assertEquals('value1', json_decode($val));
 
         $val = Product::find()->where(['id' => 1])->select(['(!children.bool!)'])->scalar();
-        $this->assertEquals(1, json_decode($val)); 
-        
-        //$val = Product::find()->where(['id' => 1])->select(['(!children.null!)'])->scalar();
-       // $this->assertNull($val);
+        $this->assertEquals(1, json_decode($val));
+
         $val = Product::find()->where(['id' => 1])->select(['(!children.null!)'])->scalar();
         $this->assertNull(json_decode($val)); //hope and pray this matches json null..and it does..
     }
@@ -366,9 +359,8 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
     {
         parent::testFindColumn();
 
-        $this->assertEquals([123, 456, 792], Product::find()->select(['(!int!)::text::numeric'])->column());
-        $this->assertEquals([792, 456, 123],
-            Product::find()->orderBy(['(!int!)::text::numeric' => SORT_DESC])->select(['(!int!)::text::numeric'])
+        $this->assertEquals([123, 456, 792], Product::find()->select(['(!int|numeric!)'])->column());
+        $this->assertEquals([792, 456, 123], Product::find()->orderBy(['(!int|numeric!)' => SORT_DESC])->select(['(!int|numeric!)'])
                 ->column());
     }
 
@@ -377,12 +369,10 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         parent::testFindBySql();
 
         // find with parameter binding
-        $product =
-            Product::findBySql(
+        $product = Product::findBySql(
                 'SELECT *, "dynamic_columns" AS dynamic_columns
-                FROM product WHERE (! children.str !)::text=:v',
-                [':v' => '"value1"']) 
-                ->one();
+                FROM product WHERE (! children.str !)=:v', [':v' => json_encode('value1')]) //when querying pg we should json_encode or double quote the string
+            ->one();
         $this->assertTrue($product instanceof Product);
         $this->assertEquals('product1', $product->name);
         $this->assertEquals('value1', $product->children['str']);
@@ -393,16 +383,16 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         parent::testFind();
 
         // find by column values
-        $product = Product::findOne(['id' => 1, '(!str!)::text' => '"value1"']);
+        $product = Product::findOne(['id' => 1, '(!str!)' => 'value1']);
         $this->assertTrue($product instanceof Product);
         $this->assertEquals('value1', $product->str);
-        $product = Product::findOne(['id' => 1, '(!str!)::text' => '"value2"']);
+        $product = Product::findOne(['id' => 1, '(!str!)' => 'value2']);
         $this->assertNull($product);
-        $product = Product::findOne(['(!children.str!)::text' => '"value5"']);
+        $product = Product::findOne(['(!children.str!)' => 'value5']);
         $this->assertNull($product);
 
         // find by attributes
-        $product = Product::find()->where(['(!children.str!)::text' => '"value1"'])->one();
+        $product = Product::find()->where(['(!children.str!)' => 'value1'])->one();
         $this->assertTrue($product instanceof Product);
         $this->assertEquals('value1', $product->children['str']);
         $this->assertEquals(1, $product->id);
@@ -419,7 +409,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
             'id' => 2,
             'name' => 'product2',
             Product::dynamicColumn() => ['int' => 456],
-        ], $product);      
+            ], $product);
         // find all asArray
         $products = Product::find()->asArray()->all();
         $this->assertEquals(3, count($products));
@@ -450,8 +440,8 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
 
         // indexBy callable
         $products = Product::find()->indexBy(function ($product) {
-            return $product->id . '-' . $product->int;
-        })->orderBy('id')->all();
+                return $product->id . '-' . $product->int;
+            })->orderBy('id')->all();
         $this->assertEquals(3, count($products));
         $this->assertTrue($products['1-123'] instanceof Product);
         $this->assertTrue($products['2-456'] instanceof Product);
@@ -531,33 +521,32 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
 
         $this->assertEquals(3, Product::find()->count());
 
-        $this->assertEquals(1, Product::find()->where(['(!int!)' => 123])->count());
-        $this->assertEquals(2, Product::find()->where(['(!int!)' => [123, 456]])->count());
-        $this->assertEquals(2, Product::find()->where(['(!int!)' => [123, 456]])->offset(1)->count());
-        $this->assertEquals(2, Product::find()->where(['(!int!)' => [123, 456]])->offset(2)->count());
+        $this->assertEquals(1, Product::find()->where(['(!int|numeric!)' => 123])->count());
+        $this->assertEquals(2, Product::find()->where(['(!int|numeric!)' => [123, 456]])->count());
+        $this->assertEquals(2, Product::find()->where(['(!int|numeric!)' => [123, 456]])->offset(1)->count());
+        $this->assertEquals(2, Product::find()->where(['(!int|numeric!)' => [123, 456]])->offset(2)->count());
     }
 
     public function testFindComplexCondition()
     {
         parent::testFindComplexCondition();
 
-        $this->assertEquals(2, Product::find()->where(['OR', ['(!int!)::text::numeric' => 123], ['(!int!)::text::numeric' => 456]])->count());
-        $this->assertEquals(2,
-            count(Product::find()->where(['OR', ['(!int!)::text::numeric' => 123], ['(!int!)::text::numeric' => 456]])->all()));
+        $this->assertEquals(2, Product::find()->where(['OR', ['(!int|numeric!)' => 123], ['(!int|numeric!)' => 456]])->count());
+        $this->assertEquals(2, count(Product::find()->where(['OR', ['(!int|numeric!)' => 123], ['(!int|numeric!)' => 456]])->all()));
 
-        $this->assertEquals(2, Product::find()->where(['(!children.str!)::text' => ['"value1"', '"value3"']])->count());
-        $this->assertEquals(2, count(Product::find()->where(['(!children.str!)::text' => ['"value1"', '"value3"']])->all()));
+        $this->assertEquals(2, Product::find()->where(['(!children.str!)' => [json_encode('value1'), json_encode('value3')]])->count());
+        $this->assertEquals(2, count(Product::find()->where(['(!children.str!)' => [json_encode('value1'), json_encode("value3")]])->all()));
 
         $this->assertEquals(1, Product::find()->where([
-            'AND',
-            ['(!children.str!)::text' => ['"value1"', '"value3"']],
-            ['BETWEEN', '(!int!)::text::numeric', 122, 124]
-        ])->count());
+                'AND',
+                ['(!children.str!)' => [json_encode('value1'), json_encode('value3')]],
+                ['BETWEEN', '(!int|numeric!)', 122, 124]
+            ])->count());
         $this->assertEquals(1, count(Product::find()->where([
-            'AND',
-            ['(!children.str!)::text' => ['"value1"', '"value3"']],
-            ['BETWEEN', '(!int!)::text::numeric', 122, 124]
-        ])->all()));
+                    'AND',
+                    ['(!children.str!)' => [json_encode('value1'), json_encode('value3')]],
+                    ['BETWEEN', '(!int|numeric!)', 122, 124]
+                ])->all()));
     }
 
     public function testFindNullValues()
@@ -568,7 +557,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         $product->int = null;
         $product->save(false);
 
-        $result = Product::find()->where(['(!int!)' => 'null'])->all();
+        $result = Product::find()->where(['(!int!)' => json_encode(NULL)])->all(); //or we can check against json null which is 'null'
         $this->assertEquals(1, count($result));
         $this->assertEquals(2, reset($result)->primaryKey);
     }
@@ -577,11 +566,13 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
     {
         parent::testExists();
 
-        $this->assertTrue(Product::find()->where(['(!children.int!)::text::numeric' => 123])->exists());
-        $this->assertFalse(Product::find()->where(['(!int!)::text::numeric' => 555])->exists());
-        $this->assertTrue(Product::find()->where(['(!children.str!)::text' => '"value3"'])->exists());
-        $this->assertFalse(Product::find()->where(['(!children.str!)::text' => '123'])->exists());
-    }  //the above throws sql exception if not quoted, I think this is normal
+        $this->assertTrue(Product::find()->where(['(!children.int|numeric!)' => 123])->exists());
+        $this->assertFalse(Product::find()->where(['(!int|numeric!)' => 555])->exists());
+        $this->assertTrue(Product::find()->where(['(!children.str!)' => '"value3"'])->exists());
+        $this->assertFalse(Product::find()->where(['(!children.str!)' => '123'])->exists());
+    }
+
+//the above throws sql exception if not quoted, I think this is normal
 
     public function testFindLazy()
     {
@@ -652,7 +643,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         $this->assertEquals([
             'string1' => 'children string',
             'integer' => 1234,
-        ], $product->children);
+            ], $product->children);
     }
 
     public function testUpdate()

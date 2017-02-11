@@ -216,7 +216,7 @@ class DynamicActiveQuery extends ActiveQuery
             % (`?) \(! \s*?
                 ( [a-z_\x7f-\xff][a-z0-9_\x7f-\xff]* (?: \. [^.|\s]+)* )
                 (?:  \| (binary (?:\(\d+\))? | char (?:\(\d+\))? | time (?:\(\d+\))? | datetime (?:\(\d+\))? | date
-                        | decimal (?:\(\d\d?(?:,\d\d?)?\))?  | double (?:\(\d\d?,\d\d?\))? | numeric? | text ? |
+                        | decimal (?:\(\d\d?(?:,\d\d?)?\))?  | double (?:\(\d\d?,\d\d?\))? | numeric? | jsonb?
                         | int(eger)? | (?:un)? signed (?:\s+int(eger)?)?)  )?
             \s*? !\) \1 %ix
 REGEXP;
