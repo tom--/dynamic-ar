@@ -30,10 +30,10 @@ class PgsqlEncoder extends BaseEncoder
         }
        // $sql = '[[' . $modelClass::dynamicColumn() . ']]';
         $sql=str_replace(".","','",$sqlarray[0]);
-    if ($type=='char')  
+    if (!isset($type))  
+    { return 'jsonb_extract_path('.$modelClass::dynamicColumn().',\''.$sql.'\')::jsonb';}
+    else if ($type=='text' || $type=='char')
     { return 'jsonb_extract_path_text('.$modelClass::dynamicColumn().',\''.$sql.'\')';}
-    else if (!isset($type))
-    { return 'jsonb_extract_path('.$modelClass::dynamicColumn().',\''.$sql.'\')::jsonb::';}
     else 
     { return 'jsonb_extract_path('.$modelClass::dynamicColumn().',\''.$sql.'\')::jsonb::text::'.$type;}
     }
