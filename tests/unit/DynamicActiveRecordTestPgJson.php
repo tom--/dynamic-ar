@@ -317,7 +317,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         parent::testCustomColumns();
 
         // find custom column
-        $customer = Product::find()->select(['*', '((!children.int!)::text::numeric *2) AS [[customColumn]]'])
+        $customer = Product::find()->select(['*', '((!children.int|numeric!) *2) AS [[customColumn]]'])
             ->where(['name' => 'product1'])->one();
         $this->assertEquals(1, $customer->id);
         $this->assertEquals(246, $customer->customColumn);
@@ -328,7 +328,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         // find custom column
         //not sure if this is something "workable" as an 'end user solution"
         $customer = Product::find()
-            ->select(['*', '(' . Product::columnExpression('children.int') . '::text::int *2) AS [[customColumn]]'])
+            ->select(['*', '(' . Product::columnExpression('children.int|numeric') . ' *2) AS [[customColumn]]'])           
             ->where(['name' => 'product1'])
             ->one();
         $this->assertEquals(1, $customer->id);

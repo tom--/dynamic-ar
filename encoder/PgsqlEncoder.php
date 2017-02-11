@@ -19,16 +19,23 @@ class PgsqlEncoder extends BaseEncoder
      *
      * @return string a SQL expression
      */
-        public function dynamicAttributeExpression($name, $type='char')
+        public function dynamicAttributeExpression($name, $type=null)
     {
         $modelClass = $this->modelClass;
+        $sqlarray=  explode('|', $name);
+      //  $sql=$sqlarray[0];
+        if (isset($sqlarray[1]))
+        {
+            $type=$sqlarray[1];
+        }
        // $sql = '[[' . $modelClass::dynamicColumn() . ']]';
-        $sql=str_replace(".","','",$name);
+        $sql=str_replace(".","','",$sqlarray[0]);
     if ($type=='char')  
     { return 'jsonb_extract_path_text('.$modelClass::dynamicColumn().',\''.$sql.'\')';}
+    else if (!isset($type))
+    { return 'jsonb_extract_path('.$modelClass::dynamicColumn().',\''.$sql.'\')::jsonb::';}
     else 
-    { return 'jsonb_extract_path('.$modelClass::dynamicColumn().',\''.$sql.'\')::jsonb';}
-       
+    { return 'jsonb_extract_path('.$modelClass::dynamicColumn().',\''.$sql.'\')::jsonb::text::'.$type;}
     }
 //    public function dynamicAttributeExpression($name, $type = 'char')
 //    {
