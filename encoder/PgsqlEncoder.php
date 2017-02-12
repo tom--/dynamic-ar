@@ -29,9 +29,9 @@ class PgsqlEncoder extends BaseEncoder
         }
         // $sql = '[[' . $modelClass::dynamicColumn() . ']]';
         $sql = str_replace(".", "','", $sqlarray[0]);
-        if ($type == 'char' || $type=='CHAR' || $type=='TEXT' || $type=='text') {
+        if ($type == 'char' || $type == 'CHAR' || $type == 'TEXT' || $type == 'text') {
             return 'jsonb_extract_path_text(' . $modelClass::dynamicColumn() . ',\'' . $sql . '\')';
-        } else if ($type == 'numeric'|| $type=='NUMERIC') {
+        } else if ($type == 'numeric' || $type == 'NUMERIC') {
             return 'jsonb_extract_path_text(' . $modelClass::dynamicColumn() . ',\'' . $sql . '\')::numeric';
         } else if ($type == 'jsonb') {
             return 'jsonb_extract_path(' . $modelClass::dynamicColumn() . ',\'' . $sql . '\')::jsonb';

@@ -216,7 +216,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
 
         $data[] = ['binarystring', self::BINARY_STRING];
 //--- the code bellow fails lines 220-222
-        
+
         foreach ($this->dataProviderTestMariaArrayEncoding() as $i => $array) {
             $data[] = ['array' . $i, $array];
         }
@@ -353,7 +353,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         $this->assertEquals(1, json_decode($val)); //either check against 'true'
 
         $val = Product::find()->where(['id' => 1])->select(['(!children.null!)'])->scalar();
-        $this->assertNull($val); 
+        $this->assertNull($val);
     }
 
     public function testFindColumn()
@@ -402,8 +402,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
 
     public function testFindAsArray()
     {   //----- parent test fails have to reasearch reasons,  asArray does not decode json
-       // parent::testFindAsArray();
-
+        // parent::testFindAsArray();
         // asArray  
         $product = Product::find()->where(['id' => 2])->asArray()->one();
         print_r($product);
