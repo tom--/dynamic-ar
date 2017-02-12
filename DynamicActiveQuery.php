@@ -223,7 +223,7 @@ REGEXP;
         $patternpostgres = <<<'REGEXP'
             % (`?) \(! \s*?
                 ( [a-z_\x7f-\xff][a-z0-9_\x7f-\xff]* (?: \. [^.|\s]+)* )
-                (?:  \| (char (?:\(\d+\))? |  numeric | jsonb | text
+                (?:  \| (char (?:\(\d+\))? |  numeric | jsonb | text 
                       | NUMERIC | JSONB | TEXT  ?)  )?
             \s*? !\) \1 %ix
 REGEXP;
