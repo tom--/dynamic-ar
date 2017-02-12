@@ -33,8 +33,10 @@ class PgsqlEncoder extends BaseEncoder
             return 'jsonb_extract_path_text(' . $modelClass::dynamicColumn() . ',\'' . $sql . '\')';
         } else if ($type == 'numeric') {
             return 'jsonb_extract_path_text(' . $modelClass::dynamicColumn() . ',\'' . $sql . '\')::numeric';
-        } else {
+        } else if ($type == 'jsonb') {
             return 'jsonb_extract_path(' . $modelClass::dynamicColumn() . ',\'' . $sql . '\')::jsonb';
+        } else {
+            throw new \yii\base\NotSupportedException("'$type' is not supported.Supported types for postgresql jsonb: char,text,numeric,jsonb");
         }
     }
 
