@@ -4,7 +4,6 @@
  * @copyright Copyright (c) 2015 Spinitron LLC
  * @license http://opensource.org/licenses/ISC
  */
-
 namespace spinitron\dynamicAr;
 
 use Yii;
@@ -46,6 +45,7 @@ use yii\db\ActiveQuery;
  */
 class DynamicActiveQuery extends ActiveQuery
 {
+
     /**
      * @var string name of the DynamicActiveRecord's column storing serialized dynamic attributes
      */
@@ -103,7 +103,7 @@ class DynamicActiveQuery extends ActiveQuery
         if (empty($this->_dynamicColumn)) {
             /** @var string $modelClass */
             throw new \yii\base\InvalidConfigException(
-                $modelClass . '::dynamicColumn() must return an attribute name'
+            $modelClass . '::dynamicColumn() must return an attribute name'
             );
         }
 
@@ -211,17 +211,31 @@ class DynamicActiveQuery extends ActiveQuery
             $type = !empty($matches[3]) ? $matches[3] : 'CHAR';
             return $encoder->dynamicAttributeExpression($matches[2], $type);
         };
-
-        $pattern = <<<'REGEXP'
+        $driver = $db->getDriverName();
+        $patternmaria = <<<'REGEXP'
             % (`?) \(! \s*?
                 ( [a-z_\x7f-\xff][a-z0-9_\x7f-\xff]* (?: \. [^.|\s]+)* )
                 (?:  \| (binary (?:\(\d+\))? | char (?:\(\d+\))? | time (?:\(\d+\))? | datetime (?:\(\d+\))? | date
-                        | decimal (?:\(\d\d?(?:,\d\d?)?\))?  | double (?:\(\d\d?,\d\d?\))? | numeric? | jsonb?
+                        | decimal (?:\(\d\d?(?:,\d\d?)?\))?  | double (?:\(\d\d?,\d\d?\))?
                         | int(eger)? | (?:un)? signed (?:\s+int(eger)?)?)  )?
             \s*? !\) \1 %ix
 REGEXP;
+        $patternpostgres = <<<'REGEXP'
+            % (`?) \(! \s*?
+                ( [a-z_\x7f-\xff][a-z0-9_\x7f-\xff]* (?: \. [^.|\s]+)* )
+                (?:  \| (char (?:\(\d+\))? |  numeric | jsonb | text
+                      | NUMERIC | JSONB | TEXT  ?)  )?
+            \s*? !\) \1 %ix
+REGEXP;
+        if ($driver == 'mysql' || $driver == 'mysqli') {
+            $pattern = $patternmaria;
+        } else if ($driver == 'pgsql') {
+            $pattern = $patternpostgres;
+        } else {
+            throw new \yii\base\NotSupportedException("DynamicActiveRecord does not support '$driver' DBMS.");
+        }
         $sql = preg_replace_callback($pattern, $callback, $sql);
-
+        // print_r($sql);
         return $db->createCommand($sql, $params);
     }
 

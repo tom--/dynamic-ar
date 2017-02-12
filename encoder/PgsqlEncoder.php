@@ -23,7 +23,7 @@ class PgsqlEncoder extends BaseEncoder
     {
         $modelClass = $this->modelClass;
         $sqlarray = explode('|', $name);
-        //  $sql=$sqlarray[0];
+
         if (isset($sqlarray[1])) {
             $type = $sqlarray[1];
         }
@@ -37,7 +37,6 @@ class PgsqlEncoder extends BaseEncoder
             return 'jsonb_extract_path(' . $modelClass::dynamicColumn() . ',\'' . $sql . '\')::jsonb';
         }
     }
-
 
     /**
      * Generates an SQL expression to select value of the dynamic column.

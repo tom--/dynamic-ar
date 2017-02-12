@@ -381,25 +381,26 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
     public function testFind()
     {
         parent::testFind();
-
+        //every string that gets searched against the db in jsonb column has to be either '"double quoted"', or json_encoded
+        // same goes for strings that get returned from the db, they have to be json_decoded 
         // find by column values
-        $product = Product::findOne(['id' => 1, '(!str!)' => 'value1']);
+        $product = Product::findOne(['id' => 1, '(!str!)' => json_encode('value1')]);
         $this->assertTrue($product instanceof Product);
         $this->assertEquals('value1', $product->str);
-        $product = Product::findOne(['id' => 1, '(!str!)' => 'value2']);
+        $product = Product::findOne(['id' => 1, '(!str!)' => '"value2"']);
         $this->assertNull($product);
-        $product = Product::findOne(['(!children.str!)' => 'value5']);
+        $product = Product::findOne(['(!children.str!)' => '"value5"']);
         $this->assertNull($product);
 
         // find by attributes
-        $product = Product::find()->where(['(!children.str!)' => 'value1'])->one();
+        $product = Product::find()->where(['(!children.str!)' => json_encode('value1')])->one();
         $this->assertTrue($product instanceof Product);
         $this->assertEquals('value1', $product->children['str']);
         $this->assertEquals(1, $product->id);
     }
 
     public function testFindAsArray()
-    {
+    {   //----- parent test fails do not know why have to check
         parent::testFindAsArray();
 
         // asArray
@@ -410,6 +411,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
             'name' => 'product2',
             Product::dynamicColumn() => ['int' => 456],
             ], $product);
+        print_r($product);
         // find all asArray
         $products = Product::find()->asArray()->all();
         $this->assertEquals(3, count($products));
