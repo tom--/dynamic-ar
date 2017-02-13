@@ -223,8 +223,8 @@ REGEXP;
         $patternpostgres = <<<'REGEXP'
             % (`?) \(! \s*?
                 ( [a-z_\x7f-\xff][a-z0-9_\x7f-\xff]* (?: \. [^.|\s]+)* )
-                (?:  \| (char (?:\(\d+\))? |  numeric | jsonb | text 
-                      | NUMERIC | JSONB | TEXT  ?)  )?
+                (?:  \| (char (?:\(\d+\))? |  numeric | jsonb | text | boolean
+                      | NUMERIC | JSONB | TEXT | BOOLEAN ?)  )?
             \s*? !\) \1 %ix
 REGEXP;
         if ($driver == 'mysql' || $driver == 'mysqli') {

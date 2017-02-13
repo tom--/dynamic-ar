@@ -322,7 +322,6 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
     public function testCustomColumnsExpression()
     {
         // find custom column
-        //not sure if this is something "workable" as an 'end user solution"
         $customer = Product::find()
             ->select(['*', '(' . Product::columnExpression('children.int|numeric') . ' *2) AS [[customColumn]]'])
             ->where(['name' => 'product1'])
@@ -349,8 +348,8 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         $val = Product::find()->where(['id' => 1])->select(['(!children.str!)'])->scalar();
         $this->assertEquals('value1', $val);
 
-        $val = Product::find()->where(['id' => 1])->select(['(!children.bool!)'])->scalar();
-        $this->assertEquals(1, json_decode($val)); //either check against 'true'
+        $val = Product::find()->where(['id' => 1])->select(['(!children.bool|jsonb!)'])->scalar();
+        $this->assertEquals(1, $val); //'true' either that or expect true/1 compared with json_encode ($val)
 
         $val = Product::find()->where(['id' => 1])->select(['(!children.null!)'])->scalar();
         $this->assertNull($val);
@@ -405,13 +404,13 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         // parent::testFindAsArray();
         // asArray  
         $product = Product::find()->where(['id' => 2])->asArray()->one();
-        print_r($product);
+     //   print_r($product);
         $this->assertEquals([
             'id' => 2,
             'name' => 'product2',
-            Product::dynamicColumn() => ['int' => 456], //this returns json '{"int": 456}
+          Product::dynamicColumn() => ['int' => 456], //this returns json '{"int": 456}
             ], $product);
-        print_r($product);
+       // print_r($product);
         // find all asArray
         $products = Product::find()->asArray()->all();
         $this->assertEquals(3, count($products));
