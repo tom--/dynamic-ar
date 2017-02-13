@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" tests="1" assertions="3" failures="1" errors="0" time="5.576924">
-    <testcase name="testFindScalar" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="343" assertions="3" time="5.576924">
-      <failure type="PHPUnit_Framework_ExpectationFailedException">tests\unit\DynamicActiveRecordPgsqlTest::testFindScalar
-Failed asserting that 'true' matches expected 1.
-
-/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordTestPgJson.php:352
-/usr/local/bin/phpunit:581
-</failure>
-    </testcase>
+  <testsuite name="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" tests="1" assertions="4" failures="0" errors="0" time="5.581287">
+    <testcase name="testFindScalar" class="tests\unit\DynamicActiveRecordPgsqlTest" file="/home/nexus/NetBeansProjects/yii2-dynamic-ar/tests/unit/DynamicActiveRecordPgsqlTest.php" line="343" assertions="4" time="5.581287"/>
   </testsuite>
 </testsuites>

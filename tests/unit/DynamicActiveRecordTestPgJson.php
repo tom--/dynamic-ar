@@ -348,7 +348,7 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         $val = Product::find()->where(['id' => 1])->select(['(!children.str!)'])->scalar();
         $this->assertEquals('value1', $val);
 
-        $val = Product::find()->where(['id' => 1])->select(['(!children.bool|jsonb!)'])->scalar();
+        $val = Product::find()->where(['id' => 1])->select(['(!children.bool|boolean!)'])->scalar();
         $this->assertEquals(1, $val); //'true' either that or expect true/1 compared with json_encode ($val)
 
         $val = Product::find()->where(['id' => 1])->select(['(!children.null!)'])->scalar();
