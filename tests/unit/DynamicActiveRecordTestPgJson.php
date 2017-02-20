@@ -170,13 +170,13 @@ class DynamicActiveRecordTestPgJson extends ActiveRecordTest
         ];
         //print_r($product->batters->batter);
         $this->assertArraySubset($expect, $product->toArray(), false);
-        
     }
-    
+
     public function testComplexJsonArray()
     {
-        $this->markTestIncomplete($message='not ready yet');
+        $this->markTestIncomplete($message = 'not ready yet');
     }
+
     public function dataProviderTestMariaArrayEncoding()
     {
         $tests = [
