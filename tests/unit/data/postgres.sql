@@ -315,6 +315,58 @@ INSERT INTO "product" (name, dynamic_columns) VALUES (
         }
     }'::jsonb);
 
+INSERT INTO "product" (id, name, dynamic_columns) VALUES ( 
+     11,
+    'product11',
+    '{
+        "supplier_id": 1,
+        "str": "value11",
+        "int": 1234,
+        "float": 123.456,
+        "bool": true,
+        "null": null,
+        "json_array": [123, "string 1", true],
+        "children": {
+            "str": "value11",
+            "int": 123,
+            "float": 123.456,
+            "bool": true,
+            "null": null
+        }
+    }'::jsonb);
+
+INSERT INTO "product" (id, name, dynamic_columns) VALUES ( 
+     12,
+    'product12',
+    '{
+		"jsonid": "0001",
+		"type": "donut",
+		"name": "Cake",
+		"ppu": 0.55,
+		"batters":
+			{
+				"batter":
+					[
+						{ "id": "1001", "type": "Regular", "quantity":5 },
+						{ "id": "1002", "type": "Chocolate", "quantity":3.2 },
+						{ "id": "1003", "type": "Blueberry", "quantity":0.89 },
+						{ "id": "1004", "type": "Devil''s Food","quantity":3223432234423321 }
+					]
+			},
+		"topping":
+			[
+				{ "id": "5001", "type": "None" },
+				{ "id": "5002", "type": "Glazed" },
+				{ "id": "5005", "type": "Sugar" },
+				{ "id": "5007", "type": "Powdered Sugar" },
+				{ "id": "5006", "type": "Chocolate with Sprinkles" },
+				{ "id": "5003", "type": "Chocolate" },
+				{ "id": "5004", "type": "Maple" }
+			]
+	
+
+	}'::jsonb);
+
 INSERT INTO "supplier" (name, dynamic_columns) VALUES (
     'One',
     '{
