@@ -3,3 +3,6 @@
 /vendor
 jssearch.index.js
 errors.txt
+/tests/arraysubset.php
+/tests/unit/FixErrorTests.php
+/tests/unit/DynamicActiveRecordTestPgJson11.php

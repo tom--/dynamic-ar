@@ -8,12 +8,8 @@
 namespace tests\unit;
 
 use Yii;
-
-/**
- * @author Tom Worster <fsb@thefsb.org>
- * @author Danil Zakablukovskii danil.kabluk@gmail.com
- */
-class DynamicActiveRecordPgsqlTest extends DynamicActiveRecordTest
+// use tests\unit\data\dar\Product;
+class DynamicActiveRecordPgsqlTest extends DynamicActiveRecordTestPgJson
 {
     protected $driverName = 'pgsql';
 }
